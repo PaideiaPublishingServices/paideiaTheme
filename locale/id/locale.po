@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: paideia-theme 1.0\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.themes.paideia.name"
+msgstr "Paideia"
+
+msgid "plugins.themes.paideia.description"
+msgstr "Tema modern untuk jurnal ilmiah, dengan halaman artikel bergaya jurnal terindeks, teks lengkap HTML langsung di halaman, dan metadata SEO. Dikembangkan oleh Paideia Studio."
+
+msgid "plugins.themes.paideia.credit"
+msgstr "Tema Paideia · Paideia Studio"
+
+msgid "plugins.themes.paideia.copy"
+msgstr "Salin"
+
+msgid "plugins.themes.paideia.copied"
+msgstr "Tersalin"
+
+msgid "plugins.themes.paideia.toc"
+msgstr "Dalam artikel ini"
+
+msgid "plugins.themes.paideia.darkMode"
+msgstr "Mode gelap"
+
+msgid "plugins.themes.paideia.lightMode"
+msgstr "Mode terang"
+
+msgid "plugins.themes.paideia.enlarge"
+msgstr "Perbesar"
+
+msgid "plugins.themes.paideia.showAllRefs"
+msgstr "Lihat semua"
+
+msgid "plugins.themes.paideia.option.fonts.label"
+msgstr "Tipografi"
+
+msgid "plugins.themes.paideia.option.fonts.serif"
+msgstr "Judul serif (Source Serif 4) dan teks sans-serif (Inter)"
+
+msgid "plugins.themes.paideia.option.fonts.sans"
+msgstr "Semua sans-serif (Inter)"
+
+msgid "plugins.themes.paideia.option.fonts.system"
+msgstr "Font sistem (lebih ringan)"
+
+msgid "plugins.themes.paideia.option.homeLayout.label"
+msgstr "Beranda"
+
+msgid "plugins.themes.paideia.option.homeLayout.description"
+msgstr "Cara terbitan ditampilkan di beranda."
+
+msgid "plugins.themes.paideia.option.homeLayout.issue"
+msgstr "Terbitan terkini dengan daftar isinya"
+
+msgid "plugins.themes.paideia.option.homeLayout.continuous"
+msgstr "Publikasi berkelanjutan: terbitan berjalan dan terbitan terakhir yang ditutup"
+
+msgid "plugins.themes.paideia.option.homeTabs.label"
+msgstr "Tab artikel"
+
+msgid "plugins.themes.paideia.option.homeTabs.description"
+msgstr "Tab berisi artikel yang paling banyak dilihat dan diunduh dalam 12 bulan terakhir."
+
+msgid "plugins.themes.paideia.option.homeTabs.option"
+msgstr "Tampilkan \"Paling banyak dilihat\" dan \"Paling banyak diunduh\" di samping \"Terbaru\""
+
+msgid "plugins.themes.paideia.option.indexing.label"
+msgstr "Indeks lain (logo sendiri)"
+
+msgid "plugins.themes.paideia.option.indexing.description"
+msgstr "Untuk indeks yang tidak ada di daftar: sisipkan logo beserta tautannya. Ditampilkan bersama yang lain."
+
+msgid "plugins.themes.paideia.option.inlineHtml.label"
+msgstr "Teks lengkap HTML"
+
+msgid "plugins.themes.paideia.option.inlineHtml.description"
+msgstr "Menampilkan galai HTML di dalam halaman artikel, bukan di penampil berbingkai."
+
+msgid "plugins.themes.paideia.option.inlineHtml.option"
+msgstr "Tampilkan galai HTML di halaman artikel"
+
+msgid "plugins.themes.paideia.option.inlineStyle.label"
+msgstr "Gaya teks lengkap"
+
+msgid "plugins.themes.paideia.option.inlineStyle.description"
+msgstr "Tampilan teks lengkap HTML."
+
+msgid "plugins.themes.paideia.option.inlineStyle.theme"
+msgstr "Tipografi tema"
+
+msgid "plugins.themes.paideia.option.inlineStyle.galley"
+msgstr "Gaya galai"
+
+msgid "plugins.themes.paideia.option.inlineXpath.label"
+msgstr "Bagian galai yang ditampilkan (lanjutan)"
+
+msgid "plugins.themes.paideia.option.inlineXpath.description"
+msgstr "Opsional. Kosongkan untuk menampilkan seluruh galai."
+
+msgid "plugins.themes.paideia.option.showMetrics.label"
+msgstr "Metrik"
+
+msgid "plugins.themes.paideia.option.showMetrics.option"
+msgstr "Tampilkan jumlah dilihat dan diunduh di halaman artikel"
+
+msgid "plugins.themes.paideia.option.seo.label"
+msgstr "Metadata untuk mesin pencari"
+
+msgid "plugins.themes.paideia.option.seo.description"
+msgstr "Metadata tambahan untuk mesin pencari dan media sosial."
+
+msgid "plugins.themes.paideia.option.seo.option"
+msgstr "Tambahkan metadata SEO"
+
+msgid "plugins.themes.paideia.option.darkMode.label"
+msgstr "Mode gelap"
+
+msgid "plugins.themes.paideia.option.darkMode.option"
+msgstr "Ikuti preferensi sistem dan tampilkan tombol mode gelap"
+
+msgid "plugins.themes.paideia.openAccess"
+msgstr "Akses terbuka"
+
+msgid "plugins.themes.paideia.pages"
+msgstr "hlm."
+
+msgid "plugins.themes.paideia.orcidUnverified"
+msgstr "belum diverifikasi"
+
+msgid "plugins.themes.paideia.correspondingAuthor"
+msgstr "Penulis korespondensi"
+
+msgid "plugins.themes.paideia.affiliations"
+msgstr "Afiliasi"
+
+msgid "plugins.themes.paideia.dateReceived"
+msgstr "Diterima"
+
+msgid "plugins.themes.paideia.dateAccepted"
+msgstr "Disetujui"
+
+msgid "plugins.themes.paideia.datePublished"
+msgstr "Diterbitkan"
+
+msgid "plugins.themes.paideia.dateUpdated"
+msgstr "Diperbarui"
+
+msgid "plugins.themes.paideia.readFulltext"
+msgstr "Baca teks lengkap"
+
+msgid "plugins.themes.paideia.share"
+msgstr "Bagikan"
+
+msgid "plugins.themes.paideia.articleInfo"
+msgstr "Informasi artikel"
+
+msgid "plugins.themes.paideia.fulltext"
+msgstr "Teks lengkap"
+
+msgid "plugins.themes.paideia.metrics"
+msgstr "Metrik"
+
+msgid "plugins.themes.paideia.views"
+msgstr "Dilihat"
+
+msgid "plugins.themes.paideia.downloads"
+msgstr "Diunduh"
+
+msgid "plugins.themes.paideia.eissn"
+msgstr "e-ISSN"
+
+msgid "plugins.themes.paideia.pissn"
+msgstr "p-ISSN"
+
+msgid "plugins.themes.paideia.publisher"
+msgstr "Penerbit"
+
+msgid "plugins.themes.paideia.submit"
+msgstr "Kirim artikel"
+
+msgid "plugins.themes.paideia.indexedIn"
+msgstr "Terindeks di"
+
+msgid "plugins.themes.paideia.articles"
+msgstr "Artikel"
+
+msgid "plugins.themes.paideia.tab.recent"
+msgstr "Terbaru"
+
+msgid "plugins.themes.paideia.tab.viewed"
+msgstr "Paling banyak dilihat"
+
+msgid "plugins.themes.paideia.tab.downloaded"
+msgstr "Paling banyak diunduh"
+
+msgid "plugins.themes.paideia.findIssue"
+msgstr "Cari terbitan"
+
+msgid "plugins.themes.paideia.creditBy"
+msgstr "Tema dikembangkan oleh"
+
+msgid "plugins.themes.paideia.navMore"
+msgstr "Lainnya"
+
+msgid "plugins.themes.paideia.copyCitation"
+msgstr "Salin sitasi"
+
+msgid "plugins.themes.paideia.option.crossmark.label"
+msgstr "Crossmark"
+
+msgid "plugins.themes.paideia.option.crossmark.description"
+msgstr "Tombol Crossmark dari Crossref di samping judul artikel ber-DOI. Jurnal harus berpartisipasi dalam Crossmark; Crossref juga meminta logo Crossmark bertautan di berkas PDF."
+
+msgid "plugins.themes.paideia.option.crossmark.option"
+msgstr "Tampilkan tombol Crossmark"
+
+msgid "plugins.themes.paideia.option.footerIdentity.label"
+msgstr "Footer"
+
+msgid "plugins.themes.paideia.option.footerIdentity.description"
+msgstr "Kolom otomatis berisi data jurnal."
+
+msgid "plugins.themes.paideia.option.footerIdentity.option"
+msgstr "Tambahkan kolom berisi nama, ISSN, penerbit, dan tautan utama jurnal"
+
+msgid "plugins.themes.paideia.citeFormat"
+msgstr "Format"
+
+msgid "plugins.themes.paideia.option.announcementBar.label"
+msgstr "Bilah pengumuman"
+
+msgid "plugins.themes.paideia.option.announcementBar.description"
+msgstr "Bilah berisi pengumuman terbaru di atas kepala halaman, di semua halaman."
+
+msgid "plugins.themes.paideia.option.announcementBar.option"
+msgstr "Tampilkan pengumuman terbaru di atas kepala halaman"
+
+msgid "plugins.themes.paideia.option.articleRail.label"
+msgstr "Panel samping artikel"
+
+msgid "plugins.themes.paideia.option.articleRail.description"
+msgstr "Isi tambahan panel samping artikel, selain metrik."
+
+msgid "plugins.themes.paideia.option.articleRail.citedBy"
+msgstr "Dikutip oleh (OpenAlex)"
+
+msgid "plugins.themes.paideia.option.articleRail.related"
+msgstr "Artikel terkait dari jurnal"
+
+msgid "plugins.themes.paideia.option.footerColumns.label"
+msgstr "Kolom footer"
+
+msgid "plugins.themes.paideia.option.footerColumns.description"
+msgstr "Jumlah kolom footer pada layar lebar."
+
+msgid "plugins.themes.paideia.option.crossmark.docs"
+msgstr "Panduan Crossmark (Crossref)"
+
+msgid "plugins.themes.paideia.announcement"
+msgstr "Pengumuman"
+
+msgid "plugins.themes.paideia.journal"
+msgstr "Jurnal"
+
+msgid "plugins.themes.paideia.licenseRights"
+msgstr "Lisensi dan hak cipta"
+
+msgid "plugins.themes.paideia.moreAbout"
+msgstr "Metrik dan artikel terkait"
+
+msgid "plugins.themes.paideia.citations"
+msgstr "Sitasi"
+
+msgid "plugins.themes.paideia.citedBy"
+msgstr "Dikutip oleh"
+
+msgid "plugins.themes.paideia.citedByAll"
+msgstr "Lihat semua {$count} sitasi"
+
+msgid "plugins.themes.paideia.citedBySource"
+msgstr "Sumber: OpenAlex"
+
+msgid "plugins.themes.paideia.related"
+msgstr "Artikel terkait"
+
+msgid "plugins.themes.paideia.publishedIn"
+msgstr "Diterbitkan di"
+
+msgid "plugins.themes.paideia.news"
+msgstr "Berita"
+
+msgid "plugins.themes.paideia.allAnnouncements"
+msgstr "Semua pengumuman"
+
+msgid "plugins.themes.paideia.backToTop"
+msgstr "Kembali ke atas"
+
+msgid "plugins.themes.paideia.licenseTerms"
+msgstr "Ketentuan jurnal"
+
+msgid "plugins.themes.paideia.option.cookieBar.label"
+msgstr "Pemberitahuan cookie"
+
+msgid "plugins.themes.paideia.option.cookieBar.description"
+msgstr "Pemberitahuan di bagian bawah halaman, dengan tautan ke pernyataan privasi jurnal."
+
+msgid "plugins.themes.paideia.option.cookieBar.option"
+msgstr "Tampilkan pemberitahuan cookie"
+
+msgid "plugins.themes.paideia.option.cookieText.label"
+msgstr "Teks pemberitahuan cookie"
+
+msgid "plugins.themes.paideia.option.cookieText.description"
+msgstr "Opsional. Jika kosong, teks bawaan tema digunakan. Hanya teks, tanpa HTML."
+
+msgid "plugins.themes.paideia.cookies.label"
+msgstr "Pemberitahuan cookie"
+
+msgid "plugins.themes.paideia.cookies.text"
+msgstr "Situs ini menggunakan cookie sendiri yang diperlukan agar berfungsi dan, dengan persetujuan Anda, cookie lain untuk mengukur penggunaan."
+
+msgid "plugins.themes.paideia.cookies.privacy"
+msgstr "Pernyataan privasi"
+
+msgid "plugins.themes.paideia.cookies.accept"
+msgstr "Terima"
+
+msgid "plugins.themes.paideia.cookies.necessary"
+msgstr "Hanya yang diperlukan"
+
+msgid "plugins.themes.paideia.option.fonts.tooltip"
+msgstr "Font disediakan oleh tema sendiri, tanpa Google Fonts. \"Font sistem\" memakai font perangkat pembaca dan merupakan opsi paling ringan."
+
+msgid "plugins.themes.paideia.option.homeLayout.tooltip"
+msgstr "Terbitan terkini: beranda menampilkan daftar isi terbitan terakhir. Publikasi berkelanjutan: terbitan terkini ditampilkan sebagai \"terbitan berjalan\" yang masih terbuka, dengan artikel dari yang terbaru, dan terbitan sebelumnya sebagai \"terbitan terakhir yang ditutup\". Artikel baru diterbitkan di terbitan terkini sampai terbitan berikutnya terbit."
+
+msgid "plugins.themes.paideia.option.homeTabs.tooltip"
+msgstr "Menggunakan statistik OJS dan diperbarui setiap 6 jam. Jika belum ada statistik, tab tidak ditampilkan."
+
+msgid "plugins.themes.paideia.option.announcementBar.tooltip"
+msgstr "Pembaca dapat menutupnya; bilah muncul lagi saat ada pengumuman baru."
+
+msgid "plugins.themes.paideia.option.indexingPosition.label"
+msgstr "Pengindeksan: posisi"
+
+msgid "plugins.themes.paideia.option.indexingPosition.description"
+msgstr "Tempat blok \"Terindeks di\" ditampilkan. Sebaiknya indeks diatur di sini, bukan di blok kustom bilah samping: tema mengatur desainnya dan logo tetap rapi."
+
+msgid "plugins.themes.paideia.option.indexingPosition.top"
+msgstr "Bagian atas beranda"
+
+msgid "plugins.themes.paideia.option.indexingPosition.bottom"
+msgstr "Bagian bawah semua halaman (di samping blok)"
+
+msgid "plugins.themes.paideia.option.index.option"
+msgstr "Terindeks (tampilkan di \"Terindeks di\")"
+
+msgid "plugins.themes.paideia.option.index.url"
+msgstr "Tautan ke jurnal di {$name}"
+
+msgid "plugins.themes.paideia.option.index.urlDescription"
+msgstr "Opsional. Dibuka di tab baru."
+
+msgid "plugins.themes.paideia.option.indexing.tooltip"
+msgstr "Gunakan tombol gambar untuk mengunggah logo dan tombol tautan untuk menambahkan alamat. Logo horizontal dengan lebar minimal 200 px paling sesuai."
+
+msgid "plugins.themes.paideia.option.inlineHtml.tooltip"
+msgstr "Meningkatkan keterbacaan dan pengindeksan di Google Scholar. Tautan galai HTML mengarah ke teks di halaman artikel."
+
+msgid "plugins.themes.paideia.option.inlineStyle.tooltip"
+msgstr "\"Tipografi tema\" disarankan untuk HTML yang dihasilkan dari JATS. \"Gaya galai\" mempertahankan desain galai yang ditata manual tanpa memengaruhi bagian lain halaman."
+
+msgid "plugins.themes.paideia.option.inlineXpath.tooltip"
+msgstr "Ekspresi XPath yang memilih bagian HTML galai yang ditampilkan. Berguna jika galai mengulang judul, penulis, atau abstrak yang sudah ada di halaman. Contoh: //div[@class='article-container']/*[not(contains(@class,'header'))]"
+
+msgid "plugins.themes.paideia.option.articleRail.tooltip"
+msgstr "\"Dikutip oleh\" menanyakan OpenAlex dari server (hanya mengirim DOI) dan menyimpan hasilnya 24 jam. \"Artikel terkait\" memakai kata kunci yang sama, tanpa indeks pencarian."
+
+msgid "plugins.themes.paideia.option.seo.tooltip"
+msgstr "JSON-LD (schema.org), Open Graph, tautan kanonis, dan citation_fulltext_html_url. Melengkapi plugin Google Scholar dan Dublin Core, bukan menggantikannya."
+
+msgid "plugins.themes.paideia.option.footerColumns.tooltip"
+msgstr "Isi footer diedit di Tampilan → Pengaturan → Footer halaman. Setiap garis horizontal (atau setiap judul) memulai kolom baru."
+
+msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
+msgstr "Nama, ISSN, penerbit, dan tautan ke Tentang, Penyerahan, Arsip, dan Kontak, diambil dari pengaturan jurnal."
+
+msgid "plugins.themes.paideia.option.cookieBar.tooltip"
+msgstr "Tombol \"Terima\" dan \"Hanya yang diperlukan\"; pilihan disimpan di peramban pembaca. Tema tidak memblokir skrip pihak ketiga: analitik atau layanan lain harus diatur agar menghormati pilihan tersebut (event pdt:cookies). Jika sudah memakai plugin cookie, jangan aktifkan opsi ini."
+
+msgid "plugins.themes.paideia.openIssue"
+msgstr "Terbitan berjalan"
+
+msgid "plugins.themes.paideia.openIssueNote"
+msgstr "Publikasi berkelanjutan: artikel diterbitkan segera setelah siap, sampai terbitan ditutup."
+
+msgid "plugins.themes.paideia.closedIssue"
+msgstr "Terbitan terakhir yang ditutup"
+
+msgid "plugins.themes.paideia.openIssueAll"
+msgstr "Lihat semua {$count} artikel terbitan ini"
+
+msgid "plugins.themes.paideia.openIssueEmpty"
+msgstr "Belum ada artikel yang diterbitkan di terbitan ini."

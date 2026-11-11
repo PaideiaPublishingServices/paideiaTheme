@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: paideia-theme 1.0\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.themes.paideia.name"
+msgstr "Paideia"
+
+msgid "plugins.themes.paideia.description"
+msgstr "Modern theme for scholarly journals, with an indexed-journal article page, inline HTML full text and SEO metadata. Developed by Paideia Studio."
+
+msgid "plugins.themes.paideia.credit"
+msgstr "Paideia theme · Paideia Studio"
+
+msgid "plugins.themes.paideia.copy"
+msgstr "Copy"
+
+msgid "plugins.themes.paideia.copied"
+msgstr "Copied"
+
+msgid "plugins.themes.paideia.toc"
+msgstr "In this article"
+
+msgid "plugins.themes.paideia.darkMode"
+msgstr "Dark mode"
+
+msgid "plugins.themes.paideia.lightMode"
+msgstr "Light mode"
+
+msgid "plugins.themes.paideia.enlarge"
+msgstr "Enlarge"
+
+msgid "plugins.themes.paideia.showAllRefs"
+msgstr "Show all"
+
+msgid "plugins.themes.paideia.option.fonts.label"
+msgstr "Typography"
+
+msgid "plugins.themes.paideia.option.fonts.serif"
+msgstr "Serif headings (Source Serif 4) and sans-serif text (Inter)"
+
+msgid "plugins.themes.paideia.option.fonts.sans"
+msgstr "All sans-serif (Inter)"
+
+msgid "plugins.themes.paideia.option.fonts.system"
+msgstr "System fonts (lightest)"
+
+msgid "plugins.themes.paideia.option.homeLayout.label"
+msgstr "Home page"
+
+msgid "plugins.themes.paideia.option.homeLayout.description"
+msgstr "How published content is presented on the home page."
+
+msgid "plugins.themes.paideia.option.homeLayout.issue"
+msgstr "Current issue with its table of contents"
+
+msgid "plugins.themes.paideia.option.homeLayout.continuous"
+msgstr "Continuous publication: issue in progress and latest closed issue"
+
+msgid "plugins.themes.paideia.option.homeTabs.label"
+msgstr "Article tabs"
+
+msgid "plugins.themes.paideia.option.homeTabs.description"
+msgstr "Tabs with the most viewed and most downloaded articles of the last 12 months."
+
+msgid "plugins.themes.paideia.option.homeTabs.option"
+msgstr "Show \"Most viewed\" and \"Most downloaded\" next to \"Latest\""
+
+msgid "plugins.themes.paideia.option.indexing.label"
+msgstr "Other indexes (custom logos)"
+
+msgid "plugins.themes.paideia.option.indexing.description"
+msgstr "For indexes not in the list: insert the logo and link it. They are shown next to the others."
+
+msgid "plugins.themes.paideia.option.inlineHtml.label"
+msgstr "HTML full text"
+
+msgid "plugins.themes.paideia.option.inlineHtml.description"
+msgstr "Shows the HTML galley inside the article page instead of the framed viewer."
+
+msgid "plugins.themes.paideia.option.inlineHtml.option"
+msgstr "Show the HTML galley on the article page"
+
+msgid "plugins.themes.paideia.option.inlineStyle.label"
+msgstr "Full-text style"
+
+msgid "plugins.themes.paideia.option.inlineStyle.description"
+msgstr "How the HTML full text looks."
+
+msgid "plugins.themes.paideia.option.inlineStyle.theme"
+msgstr "Theme typography"
+
+msgid "plugins.themes.paideia.option.inlineStyle.galley"
+msgstr "Galley styles"
+
+msgid "plugins.themes.paideia.option.inlineXpath.label"
+msgstr "Part of the galley to show (advanced)"
+
+msgid "plugins.themes.paideia.option.inlineXpath.description"
+msgstr "Optional. Leave empty to show the whole galley."
+
+msgid "plugins.themes.paideia.option.showMetrics.label"
+msgstr "Metrics"
+
+msgid "plugins.themes.paideia.option.showMetrics.option"
+msgstr "Show views and downloads on the article page"
+
+msgid "plugins.themes.paideia.option.seo.label"
+msgstr "Search engine metadata"
+
+msgid "plugins.themes.paideia.option.seo.description"
+msgstr "Extra metadata for search engines and social networks."
+
+msgid "plugins.themes.paideia.option.seo.option"
+msgstr "Add SEO metadata"
+
+msgid "plugins.themes.paideia.option.darkMode.label"
+msgstr "Dark mode"
+
+msgid "plugins.themes.paideia.option.darkMode.option"
+msgstr "Follow the system preference and show the dark mode button"
+
+msgid "plugins.themes.paideia.openAccess"
+msgstr "Open access"
+
+msgid "plugins.themes.paideia.pages"
+msgstr "pp."
+
+msgid "plugins.themes.paideia.orcidUnverified"
+msgstr "unverified"
+
+msgid "plugins.themes.paideia.correspondingAuthor"
+msgstr "Corresponding author"
+
+msgid "plugins.themes.paideia.affiliations"
+msgstr "Affiliations"
+
+msgid "plugins.themes.paideia.dateReceived"
+msgstr "Received"
+
+msgid "plugins.themes.paideia.dateAccepted"
+msgstr "Accepted"
+
+msgid "plugins.themes.paideia.datePublished"
+msgstr "Published"
+
+msgid "plugins.themes.paideia.dateUpdated"
+msgstr "Updated"
+
+msgid "plugins.themes.paideia.readFulltext"
+msgstr "Read full text"
+
+msgid "plugins.themes.paideia.share"
+msgstr "Share"
+
+msgid "plugins.themes.paideia.articleInfo"
+msgstr "Article information"
+
+msgid "plugins.themes.paideia.fulltext"
+msgstr "Full text"
+
+msgid "plugins.themes.paideia.metrics"
+msgstr "Metrics"
+
+msgid "plugins.themes.paideia.views"
+msgstr "Views"
+
+msgid "plugins.themes.paideia.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.paideia.eissn"
+msgstr "e-ISSN"
+
+msgid "plugins.themes.paideia.pissn"
+msgstr "Print ISSN"
+
+msgid "plugins.themes.paideia.publisher"
+msgstr "Publisher"
+
+msgid "plugins.themes.paideia.submit"
+msgstr "Submit an article"
+
+msgid "plugins.themes.paideia.indexedIn"
+msgstr "Indexed in"
+
+msgid "plugins.themes.paideia.articles"
+msgstr "Articles"
+
+msgid "plugins.themes.paideia.tab.recent"
+msgstr "Latest"
+
+msgid "plugins.themes.paideia.tab.viewed"
+msgstr "Most viewed"
+
+msgid "plugins.themes.paideia.tab.downloaded"
+msgstr "Most downloaded"
+
+msgid "plugins.themes.paideia.findIssue"
+msgstr "Find an issue"
+
+msgid "plugins.themes.paideia.creditBy"
+msgstr "Theme developed by"
+
+msgid "plugins.themes.paideia.navMore"
+msgstr "More"
+
+msgid "plugins.themes.paideia.copyCitation"
+msgstr "Copy citation"
+
+msgid "plugins.themes.paideia.option.crossmark.label"
+msgstr "Crossmark"
+
+msgid "plugins.themes.paideia.option.crossmark.description"
+msgstr "Crossref Crossmark button next to the title of articles with a DOI. Requires taking part in Crossmark; Crossref also asks for the linked Crossmark logo in PDFs."
+
+msgid "plugins.themes.paideia.option.crossmark.option"
+msgstr "Show the Crossmark button"
+
+msgid "plugins.themes.paideia.option.footerIdentity.label"
+msgstr "Footer"
+
+msgid "plugins.themes.paideia.option.footerIdentity.description"
+msgstr "Automatic column with the journal details."
+
+msgid "plugins.themes.paideia.option.footerIdentity.option"
+msgstr "Add a column with the journal name, ISSN, publisher and main links"
+
+msgid "plugins.themes.paideia.citeFormat"
+msgstr "Format"
+
+msgid "plugins.themes.paideia.option.announcementBar.label"
+msgstr "Announcement bar"
+
+msgid "plugins.themes.paideia.option.announcementBar.description"
+msgstr "A strip with the latest announcement above the header, on every page."
+
+msgid "plugins.themes.paideia.option.announcementBar.option"
+msgstr "Show the latest announcement above the header"
+
+msgid "plugins.themes.paideia.option.articleRail.label"
+msgstr "Article side panel"
+
+msgid "plugins.themes.paideia.option.articleRail.description"
+msgstr "What else is shown in the article side panel, besides metrics."
+
+msgid "plugins.themes.paideia.option.articleRail.citedBy"
+msgstr "Cited by (OpenAlex)"
+
+msgid "plugins.themes.paideia.option.articleRail.related"
+msgstr "Related articles from the journal"
+
+msgid "plugins.themes.paideia.option.footerColumns.label"
+msgstr "Footer columns"
+
+msgid "plugins.themes.paideia.option.footerColumns.description"
+msgstr "Footer columns on wide screens."
+
+msgid "plugins.themes.paideia.option.crossmark.docs"
+msgstr "Crossmark guide (Crossref)"
+
+msgid "plugins.themes.paideia.announcement"
+msgstr "Announcement"
+
+msgid "plugins.themes.paideia.journal"
+msgstr "The journal"
+
+msgid "plugins.themes.paideia.licenseRights"
+msgstr "License and rights"
+
+msgid "plugins.themes.paideia.moreAbout"
+msgstr "Metrics and related articles"
+
+msgid "plugins.themes.paideia.citations"
+msgstr "Citations"
+
+msgid "plugins.themes.paideia.citedBy"
+msgstr "Cited by"
+
+msgid "plugins.themes.paideia.citedByAll"
+msgstr "See all {$count} citations"
+
+msgid "plugins.themes.paideia.citedBySource"
+msgstr "Source: OpenAlex"
+
+msgid "plugins.themes.paideia.related"
+msgstr "Related articles"
+
+msgid "plugins.themes.paideia.publishedIn"
+msgstr "Published in"
+
+msgid "plugins.themes.paideia.news"
+msgstr "News"
+
+msgid "plugins.themes.paideia.allAnnouncements"
+msgstr "All announcements"
+
+msgid "plugins.themes.paideia.backToTop"
+msgstr "Back to top"
+
+msgid "plugins.themes.paideia.licenseTerms"
+msgstr "Journal terms"
+
+msgid "plugins.themes.paideia.option.cookieBar.label"
+msgstr "Cookie notice"
+
+msgid "plugins.themes.paideia.option.cookieBar.description"
+msgstr "Notice at the bottom of the page, with a link to the journal's privacy statement."
+
+msgid "plugins.themes.paideia.option.cookieBar.option"
+msgstr "Show the cookie notice"
+
+msgid "plugins.themes.paideia.option.cookieText.label"
+msgstr "Cookie notice text"
+
+msgid "plugins.themes.paideia.option.cookieText.description"
+msgstr "Optional. If empty, the theme's text is used. Plain text only, no HTML."
+
+msgid "plugins.themes.paideia.cookies.label"
+msgstr "Cookie notice"
+
+msgid "plugins.themes.paideia.cookies.text"
+msgstr "This site uses its own cookies that are necessary for it to work and, with your consent, others to measure usage."
+
+msgid "plugins.themes.paideia.cookies.privacy"
+msgstr "Privacy statement"
+
+msgid "plugins.themes.paideia.cookies.accept"
+msgstr "Accept"
+
+msgid "plugins.themes.paideia.cookies.necessary"
+msgstr "Necessary only"
+
+msgid "plugins.themes.paideia.option.fonts.tooltip"
+msgstr "Fonts are served by the theme itself, without Google Fonts. \"System fonts\" uses the reader's device fonts and is the lightest option."
+
+msgid "plugins.themes.paideia.option.homeLayout.tooltip"
+msgstr "Current issue: the home page shows the table of contents of the latest issue. Continuous publication: the current issue is shown as the open \"issue in progress\", with its articles from newest to oldest, and the previous issue as the \"latest closed issue\". New articles are published in the current issue until the next one is published."
+
+msgid "plugins.themes.paideia.option.homeTabs.tooltip"
+msgstr "Uses OJS statistics and is refreshed every 6 hours. If there are no statistics yet, the tab is not shown."
+
+msgid "plugins.themes.paideia.option.announcementBar.tooltip"
+msgstr "Readers can close it; it comes back when a new announcement is published."
+
+msgid "plugins.themes.paideia.option.indexingPosition.label"
+msgstr "Indexing: placement"
+
+msgid "plugins.themes.paideia.option.indexingPosition.description"
+msgstr "Where the \"Indexed in\" block is shown. We recommend adding indexes here rather than in a custom sidebar block: the theme handles the design and keeps logos aligned."
+
+msgid "plugins.themes.paideia.option.indexingPosition.top"
+msgstr "Top of the home page"
+
+msgid "plugins.themes.paideia.option.indexingPosition.bottom"
+msgstr "Bottom of every page (next to the blocks)"
+
+msgid "plugins.themes.paideia.option.index.option"
+msgstr "Indexed (show in \"Indexed in\")"
+
+msgid "plugins.themes.paideia.option.index.url"
+msgstr "Link to the journal in {$name}"
+
+msgid "plugins.themes.paideia.option.index.urlDescription"
+msgstr "Optional. Opens in a new tab."
+
+msgid "plugins.themes.paideia.option.indexing.tooltip"
+msgstr "Use the image button to upload the logo and the link button to add the address. Horizontal logos at least 200 px wide work best."
+
+msgid "plugins.themes.paideia.option.inlineHtml.tooltip"
+msgstr "Improves reading and Google Scholar indexing. The HTML galley link goes to the text on the article page."
+
+msgid "plugins.themes.paideia.option.inlineStyle.tooltip"
+msgstr "\"Theme typography\" is recommended for HTML generated from JATS. \"Galley styles\" keeps the design of hand-made galleys without affecting the rest of the page."
+
+msgid "plugins.themes.paideia.option.inlineXpath.tooltip"
+msgstr "XPath expression that selects which part of the galley HTML is shown. Useful when the galley repeats the title, authors or abstract already on the page. Example: //div[@class='article-container']/*[not(contains(@class,'header'))]"
+
+msgid "plugins.themes.paideia.option.articleRail.tooltip"
+msgstr "\"Cited by\" queries OpenAlex from the server (only the DOI is sent) and caches the result for 24 hours. \"Related articles\" uses shared keywords, not the search index."
+
+msgid "plugins.themes.paideia.option.seo.tooltip"
+msgstr "JSON-LD (schema.org), Open Graph, canonical link and citation_fulltext_html_url. It complements the Google Scholar and Dublin Core plugins; it does not replace them."
+
+msgid "plugins.themes.paideia.option.footerColumns.tooltip"
+msgstr "Footer content is edited in Appearance → Setup → Page footer. Each horizontal rule (or each heading) starts a column."
+
+msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
+msgstr "Name, ISSN, publisher and links to About, Submissions, Archive and Contact, taken from the journal settings."
+
+msgid "plugins.themes.paideia.option.cookieBar.tooltip"
+msgstr "\"Accept\" and \"Necessary only\" buttons; the choice is stored in the reader's browser. The theme does not block third-party scripts: analytics or other services must be set up to respect the choice (pdt:cookies event). If you already use a cookie plugin, leave this off."
+
+msgid "plugins.themes.paideia.openIssue"
+msgstr "Issue in progress"
+
+msgid "plugins.themes.paideia.openIssueNote"
+msgstr "Continuous publication: articles are published as soon as they are ready, until the issue closes."
+
+msgid "plugins.themes.paideia.closedIssue"
+msgstr "Latest closed issue"
+
+msgid "plugins.themes.paideia.openIssueAll"
+msgstr "See all {$count} articles in this issue"
+
+msgid "plugins.themes.paideia.openIssueEmpty"
+msgstr "No articles have been published in this issue yet."

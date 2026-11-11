@@ -1,0 +1,45 @@
+# Al publicar un tag vX.Y.Z.W, arma el paquete instalable de OJS
+# (un .tar.gz con una única carpeta "paideia/") y lo adjunta al release.
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verificar versión
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          XML="$(sed -n 's:.*<release>\(.*\)</release>.*:\1:p' version.xml)"
+          if [ "$TAG" != "$XML" ]; then
+            echo "El tag ($TAG) no coincide con version.xml ($XML)" >&2
+            exit 1
+          fi
+          echo "VERSION=$XML" >> "$GITHUB_ENV"
+
+      - name: Chequear sintaxis PHP
+        run: find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l > /dev/null
+
+      - name: Validar traducciones
+        run: |
+          sudo apt-get install -y gettext > /dev/null
+          for f in locale/*/locale.po; do msgfmt -o /dev/null "$f"; done
+
+      - name: Armar paquete
+        run: git archive --format=tar.gz --prefix=paideia/ -o "paideia-${VERSION}.tar.gz" HEAD
+
+      - name: Publicar release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" "paideia-${VERSION}.tar.gz" \
+            --title "Paideia ${VERSION}" --generate-notes

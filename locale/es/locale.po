@@ -1,0 +1,409 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: paideia-theme 1.0\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.themes.paideia.name"
+msgstr "Paideia"
+
+msgid "plugins.themes.paideia.description"
+msgstr "Theme moderno para revistas científicas, con página de artículo de revista indexada, texto completo HTML inline y metadatos SEO. Desarrollado por Paideia Studio."
+
+msgid "plugins.themes.paideia.credit"
+msgstr "Theme Paideia · Paideia Studio"
+
+msgid "plugins.themes.paideia.copy"
+msgstr "Copiar"
+
+msgid "plugins.themes.paideia.copied"
+msgstr "Copiado"
+
+msgid "plugins.themes.paideia.toc"
+msgstr "En este artículo"
+
+msgid "plugins.themes.paideia.darkMode"
+msgstr "Modo oscuro"
+
+msgid "plugins.themes.paideia.lightMode"
+msgstr "Modo claro"
+
+msgid "plugins.themes.paideia.enlarge"
+msgstr "Ampliar"
+
+msgid "plugins.themes.paideia.showAllRefs"
+msgstr "Ver todas"
+
+msgid "plugins.themes.paideia.option.fonts.label"
+msgstr "Tipografía"
+
+msgid "plugins.themes.paideia.option.fonts.serif"
+msgstr "Títulos con serifa (Source Serif 4) y texto sin serifa (Inter)"
+
+msgid "plugins.themes.paideia.option.fonts.sans"
+msgstr "Todo sin serifa (Inter)"
+
+msgid "plugins.themes.paideia.option.fonts.system"
+msgstr "Fuentes del sistema (más liviano)"
+
+msgid "plugins.themes.paideia.option.homeLayout.label"
+msgstr "Página de inicio"
+
+msgid "plugins.themes.paideia.option.homeLayout.description"
+msgstr "Cómo se presenta lo publicado en el inicio."
+
+msgid "plugins.themes.paideia.option.homeLayout.issue"
+msgstr "Número actual con su tabla de contenidos"
+
+msgid "plugins.themes.paideia.option.homeLayout.continuous"
+msgstr "Publicación continua: número en curso y último número cerrado"
+
+msgid "plugins.themes.paideia.option.homeTabs.label"
+msgstr "Pestañas de artículos"
+
+msgid "plugins.themes.paideia.option.homeTabs.description"
+msgstr "Pestañas con los artículos más vistos y más descargados de los últimos 12 meses."
+
+msgid "plugins.themes.paideia.option.homeTabs.option"
+msgstr "Mostrar \"Más vistos\" y \"Más descargados\" junto a \"Más recientes\""
+
+msgid "plugins.themes.paideia.option.indexing.label"
+msgstr "Otros índices (logos propios)"
+
+msgid "plugins.themes.paideia.option.indexing.description"
+msgstr "Para índices que no están en la lista: inserte el logo y enlácelo. Se muestran junto a los anteriores."
+
+msgid "plugins.themes.paideia.option.inlineHtml.label"
+msgstr "Texto completo HTML"
+
+msgid "plugins.themes.paideia.option.inlineHtml.description"
+msgstr "Muestra la galerada HTML dentro de la página del artículo, en lugar del visor con marco."
+
+msgid "plugins.themes.paideia.option.inlineHtml.option"
+msgstr "Mostrar la galerada HTML en la página del artículo"
+
+msgid "plugins.themes.paideia.option.inlineStyle.label"
+msgstr "Estilo del texto completo"
+
+msgid "plugins.themes.paideia.option.inlineStyle.description"
+msgstr "Cómo se ve el texto completo HTML."
+
+msgid "plugins.themes.paideia.option.inlineStyle.theme"
+msgstr "Tipografía del tema"
+
+msgid "plugins.themes.paideia.option.inlineStyle.galley"
+msgstr "Estilos de la galerada"
+
+msgid "plugins.themes.paideia.option.inlineXpath.label"
+msgstr "Parte de la galerada a mostrar (avanzado)"
+
+msgid "plugins.themes.paideia.option.inlineXpath.description"
+msgstr "Opcional. Déjelo vacío para mostrar toda la galerada."
+
+msgid "plugins.themes.paideia.option.showMetrics.label"
+msgstr "Métricas"
+
+msgid "plugins.themes.paideia.option.showMetrics.option"
+msgstr "Mostrar vistas y descargas en la página del artículo"
+
+msgid "plugins.themes.paideia.option.seo.label"
+msgstr "Metadatos para buscadores"
+
+msgid "plugins.themes.paideia.option.seo.description"
+msgstr "Metadatos adicionales para buscadores y redes sociales."
+
+msgid "plugins.themes.paideia.option.seo.option"
+msgstr "Agregar metadatos SEO"
+
+msgid "plugins.themes.paideia.option.darkMode.label"
+msgstr "Modo oscuro"
+
+msgid "plugins.themes.paideia.option.darkMode.option"
+msgstr "Respetar la preferencia del sistema y mostrar el botón de modo oscuro"
+
+msgid "plugins.themes.paideia.openAccess"
+msgstr "Acceso abierto"
+
+msgid "plugins.themes.paideia.pages"
+msgstr "pp."
+
+msgid "plugins.themes.paideia.orcidUnverified"
+msgstr "no verificado"
+
+msgid "plugins.themes.paideia.correspondingAuthor"
+msgstr "Autor de correspondencia"
+
+msgid "plugins.themes.paideia.affiliations"
+msgstr "Afiliaciones"
+
+msgid "plugins.themes.paideia.dateReceived"
+msgstr "Recibido"
+
+msgid "plugins.themes.paideia.dateAccepted"
+msgstr "Aceptado"
+
+msgid "plugins.themes.paideia.datePublished"
+msgstr "Publicado"
+
+msgid "plugins.themes.paideia.dateUpdated"
+msgstr "Actualizado"
+
+msgid "plugins.themes.paideia.readFulltext"
+msgstr "Leer texto completo"
+
+msgid "plugins.themes.paideia.share"
+msgstr "Compartir"
+
+msgid "plugins.themes.paideia.articleInfo"
+msgstr "Información del artículo"
+
+msgid "plugins.themes.paideia.fulltext"
+msgstr "Texto completo"
+
+msgid "plugins.themes.paideia.metrics"
+msgstr "Métricas"
+
+msgid "plugins.themes.paideia.views"
+msgstr "Vistas"
+
+msgid "plugins.themes.paideia.downloads"
+msgstr "Descargas"
+
+msgid "plugins.themes.paideia.eissn"
+msgstr "e-ISSN"
+
+msgid "plugins.themes.paideia.pissn"
+msgstr "ISSN impreso"
+
+msgid "plugins.themes.paideia.publisher"
+msgstr "Editor"
+
+msgid "plugins.themes.paideia.submit"
+msgstr "Enviar un artículo"
+
+msgid "plugins.themes.paideia.indexedIn"
+msgstr "Indexada en"
+
+msgid "plugins.themes.paideia.articles"
+msgstr "Artículos"
+
+msgid "plugins.themes.paideia.tab.recent"
+msgstr "Más recientes"
+
+msgid "plugins.themes.paideia.tab.viewed"
+msgstr "Más vistos"
+
+msgid "plugins.themes.paideia.tab.downloaded"
+msgstr "Más descargados"
+
+msgid "plugins.themes.paideia.findIssue"
+msgstr "Buscar número"
+
+msgid "plugins.themes.paideia.creditBy"
+msgstr "Theme desarrollado por"
+
+msgid "plugins.themes.paideia.navMore"
+msgstr "Más"
+
+msgid "plugins.themes.paideia.copyCitation"
+msgstr "Copiar cita"
+
+msgid "plugins.themes.paideia.option.crossmark.label"
+msgstr "Crossmark"
+
+msgid "plugins.themes.paideia.option.crossmark.description"
+msgstr "Botón Crossmark de Crossref junto al título de los artículos con DOI. Requiere participar en Crossmark; Crossref pide además el logo de Crossmark, enlazado, en los PDF."
+
+msgid "plugins.themes.paideia.option.crossmark.option"
+msgstr "Mostrar el botón Crossmark"
+
+msgid "plugins.themes.paideia.option.footerIdentity.label"
+msgstr "Pie de página"
+
+msgid "plugins.themes.paideia.option.footerIdentity.description"
+msgstr "Columna automática con los datos de la revista."
+
+msgid "plugins.themes.paideia.option.footerIdentity.option"
+msgstr "Agregar una columna con el nombre, el ISSN, la editorial y los enlaces principales de la revista"
+
+msgid "plugins.themes.paideia.citeFormat"
+msgstr "Formato"
+
+msgid "plugins.themes.paideia.option.announcementBar.label"
+msgstr "Barra de avisos"
+
+msgid "plugins.themes.paideia.option.announcementBar.description"
+msgstr "Franja con el último aviso arriba de la cabecera, en todas las páginas."
+
+msgid "plugins.themes.paideia.option.announcementBar.option"
+msgstr "Mostrar el último aviso arriba de la cabecera"
+
+msgid "plugins.themes.paideia.option.articleRail.label"
+msgstr "Panel lateral del artículo"
+
+msgid "plugins.themes.paideia.option.articleRail.description"
+msgstr "Qué más se muestra en el panel lateral del artículo, además de las métricas."
+
+msgid "plugins.themes.paideia.option.articleRail.citedBy"
+msgstr "Citado por (OpenAlex)"
+
+msgid "plugins.themes.paideia.option.articleRail.related"
+msgstr "Artículos relacionados de la revista"
+
+msgid "plugins.themes.paideia.option.footerColumns.label"
+msgstr "Columnas del pie de página"
+
+msgid "plugins.themes.paideia.option.footerColumns.description"
+msgstr "Columnas del pie de página en pantallas anchas."
+
+msgid "plugins.themes.paideia.option.crossmark.docs"
+msgstr "Guía de Crossmark (Crossref)"
+
+msgid "plugins.themes.paideia.announcement"
+msgstr "Aviso"
+
+msgid "plugins.themes.paideia.journal"
+msgstr "La revista"
+
+msgid "plugins.themes.paideia.licenseRights"
+msgstr "Licencia y derechos"
+
+msgid "plugins.themes.paideia.moreAbout"
+msgstr "Métricas y artículos relacionados"
+
+msgid "plugins.themes.paideia.citations"
+msgstr "Citas"
+
+msgid "plugins.themes.paideia.citedBy"
+msgstr "Citado por"
+
+msgid "plugins.themes.paideia.citedByAll"
+msgstr "Ver las {$count} citas"
+
+msgid "plugins.themes.paideia.citedBySource"
+msgstr "Fuente: OpenAlex"
+
+msgid "plugins.themes.paideia.related"
+msgstr "Artículos relacionados"
+
+msgid "plugins.themes.paideia.publishedIn"
+msgstr "Publicado en"
+
+msgid "plugins.themes.paideia.news"
+msgstr "Novedades"
+
+msgid "plugins.themes.paideia.allAnnouncements"
+msgstr "Todos los avisos"
+
+msgid "plugins.themes.paideia.backToTop"
+msgstr "Volver arriba"
+
+msgid "plugins.themes.paideia.licenseTerms"
+msgstr "Términos de la revista"
+
+msgid "plugins.themes.paideia.option.cookieBar.label"
+msgstr "Aviso de cookies"
+
+msgid "plugins.themes.paideia.option.cookieBar.description"
+msgstr "Aviso abajo de la página, con enlace a la declaración de privacidad de la revista."
+
+msgid "plugins.themes.paideia.option.cookieBar.option"
+msgstr "Mostrar el aviso de cookies"
+
+msgid "plugins.themes.paideia.option.cookieText.label"
+msgstr "Texto del aviso de cookies"
+
+msgid "plugins.themes.paideia.option.cookieText.description"
+msgstr "Opcional. Si queda vacío se usa el texto del theme. Sólo texto, sin HTML."
+
+msgid "plugins.themes.paideia.cookies.label"
+msgstr "Aviso de cookies"
+
+msgid "plugins.themes.paideia.cookies.text"
+msgstr "Este sitio usa cookies propias necesarias para su funcionamiento y, con su consentimiento, otras para medir el uso."
+
+msgid "plugins.themes.paideia.cookies.privacy"
+msgstr "Declaración de privacidad"
+
+msgid "plugins.themes.paideia.cookies.accept"
+msgstr "Aceptar"
+
+msgid "plugins.themes.paideia.cookies.necessary"
+msgstr "Sólo necesarias"
+
+msgid "plugins.themes.paideia.option.fonts.tooltip"
+msgstr "Las fuentes se sirven desde el propio tema, sin Google Fonts. \"Fuentes del sistema\" usa las del dispositivo del lector y es la opción más liviana."
+
+msgid "plugins.themes.paideia.option.homeLayout.tooltip"
+msgstr "Número actual: el inicio muestra la tabla de contenidos del último número publicado. Publicación continua: el número actual se presenta como \"número en curso\", abierto, con sus artículos del más nuevo al más antiguo, y el número anterior como \"último número cerrado\". Los artículos nuevos se publican en el número actual hasta que se publica el siguiente."
+
+msgid "plugins.themes.paideia.option.homeTabs.tooltip"
+msgstr "Usa las estadísticas de OJS y se actualiza cada 6 horas. Si todavía no hay estadísticas, la pestaña no aparece."
+
+msgid "plugins.themes.paideia.option.announcementBar.tooltip"
+msgstr "El lector puede cerrarla; vuelve a aparecer cuando se publica un aviso nuevo."
+
+msgid "plugins.themes.paideia.option.indexingPosition.label"
+msgstr "Indexación: ubicación"
+
+msgid "plugins.themes.paideia.option.indexingPosition.description"
+msgstr "Dónde se muestra el bloque \"Indexada en\". Se recomienda cargar los índices aquí y no en un bloque personalizado de la barra lateral: el tema se ocupa del diseño y los logos quedan alineados."
+
+msgid "plugins.themes.paideia.option.indexingPosition.top"
+msgstr "Arriba, en la página de inicio"
+
+msgid "plugins.themes.paideia.option.indexingPosition.bottom"
+msgstr "Abajo, en todas las páginas (junto a los bloques)"
+
+msgid "plugins.themes.paideia.option.index.option"
+msgstr "Indexada (mostrar en \"Indexada en\")"
+
+msgid "plugins.themes.paideia.option.index.url"
+msgstr "Enlace a la revista en {$name}"
+
+msgid "plugins.themes.paideia.option.index.urlDescription"
+msgstr "Opcional. Se abre en una pestaña nueva."
+
+msgid "plugins.themes.paideia.option.indexing.tooltip"
+msgstr "Use el botón de imagen para subir el logo y el de enlace para agregar la dirección. Funcionan mejor los logos horizontales de al menos 200 px de ancho."
+
+msgid "plugins.themes.paideia.option.inlineHtml.tooltip"
+msgstr "Mejora la lectura y la indexación en Google Scholar. El enlace a la galerada HTML lleva al texto dentro de la página."
+
+msgid "plugins.themes.paideia.option.inlineStyle.tooltip"
+msgstr "\"Tipografía del tema\" es lo recomendado para HTML generado desde JATS. \"Estilos de la galerada\" conserva el diseño de galeradas maquetadas a mano, sin que afecte al resto de la página."
+
+msgid "plugins.themes.paideia.option.inlineXpath.tooltip"
+msgstr "Expresión XPath que elige qué parte del HTML de la galerada se muestra. Sirve cuando la galerada repite el título, los autores o el resumen que la página ya muestra. Ejemplo: //div[@class='article-container']/*[not(contains(@class,'header'))]"
+
+msgid "plugins.themes.paideia.option.articleRail.tooltip"
+msgstr "\"Citado por\" consulta OpenAlex desde el servidor (sólo envía el DOI) y guarda el resultado 24 horas. \"Artículos relacionados\" usa las palabras clave compartidas, sin el índice de búsqueda."
+
+msgid "plugins.themes.paideia.option.seo.tooltip"
+msgstr "JSON-LD (schema.org), Open Graph, enlace canónico y citation_fulltext_html_url. Complementa los plugins Google Scholar y Dublin Core, no los reemplaza."
+
+msgid "plugins.themes.paideia.option.footerColumns.tooltip"
+msgstr "El contenido del pie se edita en Apariencia → Configuración → Pie de página. Cada línea horizontal (o cada título) inicia una columna."
+
+msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
+msgstr "Nombre, ISSN, editorial y enlaces a Acerca de, Envíos, Archivo y Contacto, tomados de la configuración de la revista."
+
+msgid "plugins.themes.paideia.option.cookieBar.tooltip"
+msgstr "Botones \"Aceptar\" y \"Sólo necesarias\"; la elección queda en el navegador del lector. El tema no bloquea scripts de terceros: la analítica u otros servicios deben configurarse para respetar la elección (evento pdt:cookies). Si ya tiene un plugin de cookies, no active esta opción."
+
+msgid "plugins.themes.paideia.openIssue"
+msgstr "Número en curso"
+
+msgid "plugins.themes.paideia.openIssueNote"
+msgstr "Publicación continua: los artículos se publican a medida que están listos, hasta el cierre del número."
+
+msgid "plugins.themes.paideia.closedIssue"
+msgstr "Último número cerrado"
+
+msgid "plugins.themes.paideia.openIssueAll"
+msgstr "Ver los {$count} artículos del número"
+
+msgid "plugins.themes.paideia.openIssueEmpty"
+msgstr "Todavía no hay artículos publicados en este número."

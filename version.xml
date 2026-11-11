@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
+
+<!--
+  * plugins/themes/paideia/version.xml
+  *
+  * Copyright (c) 2026 Paideia Publishing Services LLC
+  * Distributed under the GNU GPL v3 with an additional attribution term
+  * (GPLv3 section 7(b)). See LICENSE.
+  -->
+<version>
+	<application>paideia</application>
+	<type>plugins.themes</type>
+	<release>1.0.0.0</release>
+	<date>2026-11-10</date>
+	<lazy-load>1</lazy-load>
+	<class>PaideiaThemePlugin</class>
+</version>
