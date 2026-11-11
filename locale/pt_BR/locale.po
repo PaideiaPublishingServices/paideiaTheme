@@ -407,3 +407,9 @@ msgstr "Ver os {$count} artigos da edição"
 
 msgid "plugins.themes.paideia.openIssueEmpty"
 msgstr "Ainda não há artigos publicados nesta edição."
+
+msgid "plugins.themes.paideia.option.colour.label"
+msgstr "Cor principal"
+
+msgid "plugins.themes.paideia.option.colour.description"
+msgstr "Usada no cabeçalho, nos botões, nos links e nas abas."

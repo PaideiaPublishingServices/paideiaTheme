@@ -407,3 +407,9 @@ msgstr "Ver los {$count} artículos del número"
 
 msgid "plugins.themes.paideia.openIssueEmpty"
 msgstr "Todavía no hay artículos publicados en este número."
+
+msgid "plugins.themes.paideia.option.colour.label"
+msgstr "Color principal"
+
+msgid "plugins.themes.paideia.option.colour.description"
+msgstr "Se usa en la cabecera, los botones, los enlaces y las pestañas."

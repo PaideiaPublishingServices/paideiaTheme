@@ -215,12 +215,13 @@ class ArticleData
                 return null;
             }
             $totals = $service->getTotalsByType((int) $article->getId(), (int) $context->getId(), null, null);
-            $downloads = (int) ($totals['pdfViews'] ?? 0) + (int) ($totals['htmlViews'] ?? 0) + (int) ($totals['otherViews'] ?? 0);
+            // 3.4: abstractViews/pdfViews/htmlViews/otherViews; 3.5: abstract/pdf/html/other.
+            $get = fn (string $key) => (int) ($totals[$key . 'Views'] ?? $totals[$key] ?? 0);
             return [
-                'views' => (int) ($totals['abstractViews'] ?? 0),
-                'downloads' => $downloads,
-                'pdf' => (int) ($totals['pdfViews'] ?? 0),
-                'html' => (int) ($totals['htmlViews'] ?? 0),
+                'views' => $get('abstract'),
+                'downloads' => $get('pdf') + $get('html') + $get('other'),
+                'pdf' => $get('pdf'),
+                'html' => $get('html'),
             ];
         } catch (Throwable $e) {
             error_log('[paideia theme] Métricas no disponibles: ' . $e->getMessage());

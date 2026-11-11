@@ -407,3 +407,9 @@ msgstr "See all {$count} articles in this issue"
 
 msgid "plugins.themes.paideia.openIssueEmpty"
 msgstr "No articles have been published in this issue yet."
+
+msgid "plugins.themes.paideia.option.colour.label"
+msgstr "Main colour"
+
+msgid "plugins.themes.paideia.option.colour.description"
+msgstr "Used for the header, buttons, links and tabs."

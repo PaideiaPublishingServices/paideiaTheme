@@ -224,7 +224,7 @@
 							<li class="pdt-toc__l{$item.level}"><a href="#{$item.id|escape}">{$item.text|escape}</a></li>
 						{/foreach}
 					{/if}
-					{if ($parsedCitations && count($parsedCitations)) || $pdt.citationsRaw}<li><a href="#pdt-references">{translate key="submission.citations"}</a></li>{/if}
+					{if !$pdtGalleyHasRefs && (($parsedCitations && count($parsedCitations)) || $pdt.citationsRaw)}<li><a href="#pdt-references">{translate key="submission.citations"}</a></li>{/if}
 					<li><a href="#pdt-info">{translate key="plugins.themes.paideia.articleInfo"}</a></li>
 				</ol>
 			</details>
@@ -279,7 +279,7 @@
 			{/if}
 
 			{* Referencias *}
-			{if ($parsedCitations && count($parsedCitations)) || $pdt.citationsRaw}
+			{if !$pdtGalleyHasRefs && (($parsedCitations && count($parsedCitations)) || $pdt.citationsRaw)}
 				<section class="pdt-section pdt-references item references" id="pdt-references">
 					<h2 class="pdt-section__title">{translate key="submission.citations"}</h2>
 					<ol class="pdt-references__list" data-pdt-references>

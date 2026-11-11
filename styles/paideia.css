@@ -1387,7 +1387,7 @@ body.pdt .pdt-cookies__actions { display: flex; gap: .5rem; flex-wrap: wrap; }
 	body.pdt .pkp_site_name_wrapper { display: flex; align-items: center; gap: .5rem; width: 100%; height: auto; min-height: 48px; }
 	body.pdt .pkp_site_name { position: static; top: auto; left: auto; transform: none; flex: 1 1 auto; min-width: 0; margin: 0; padding: 0; }
 	body.pdt .pkp_site_name .is_img img { max-height: 40px; max-width: 100%; }
-	body.pdt .pkp_site_name .is_text { font-size: 1.05rem; }
+	body.pdt .pkp_site_name .is_text { font-size: 1rem; line-height: 1.25; white-space: normal !important; overflow: visible !important; text-overflow: clip !important; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden !important; }
 	body.pdt .pkp_site_name_wrapper .pdt-scheme-toggle { order: 2; }
 	body.pdt .pkp_site_nav_toggle { position: relative; top: auto; left: auto; order: 3; flex: none; margin: 0; }
 	body.pdt .pkp_site_nav_toggle { width: 40px; height: 40px; border: 1px solid var(--pdt-border); box-shadow: none; background: var(--pdt-bg); }

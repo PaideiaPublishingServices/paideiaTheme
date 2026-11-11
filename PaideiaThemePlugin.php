@@ -65,8 +65,18 @@ class PaideiaThemePlugin extends ThemePlugin
     {
         $this->setParent('defaultthemeplugin');
 
-        // El theme trae su propia tipografía: la opción del padre no aplica.
-        $this->removeOption('typography');
+        // Opciones del theme padre que Paideia no usa: tipografía (trae la
+        // suya), sumario de la revista en el inicio (la portada ya muestra la
+        // descripción) y gráfico de estadísticas (las métricas van en el panel
+        // lateral del artículo).
+        foreach (['typography', 'showDescriptionInJournalIndex', 'displayStats'] as $unused) {
+            $this->removeOption($unused);
+        }
+        // El color del padre es el color principal de todo el theme.
+        if ($this->parent && isset($this->parent->options['baseColour']) && $this->isActive()) {
+            $this->parent->options['baseColour']->label = __('plugins.themes.paideia.option.colour.label');
+            $this->parent->options['baseColour']->description = htmlspecialchars(__('plugins.themes.paideia.option.colour.description'), ENT_QUOTES, 'UTF-8');
+        }
 
         $this->addThemeOptions();
 
@@ -538,6 +548,12 @@ class PaideiaThemePlugin extends ThemePlugin
         $templateMgr->assign([
             'pdt' => $data,
             'pdtFulltext' => $fulltext,
+            // Si el texto completo ya trae su sección de referencias, el theme
+            // no repite la lista (ni la entrada del índice).
+            'pdtGalleyHasRefs' => $fulltext && !empty($fulltext['toc']) && (bool) array_filter(
+                $fulltext['toc'],
+                fn ($i) => preg_match('/^[\d.\s]*(referencias|references|referências|refer[eê]ncias bibliogr[aá]ficas|bibliograf[ií]a|bibliography|daftar pustaka|obras citadas|works cited)\b/iu', $i['text'])
+            ),
             'pdtHtmlGalleyId' => $fulltext && $htmlGalley ? $htmlGalley->getId() : null,
             'pdtTheme' => $this,
         ]);

@@ -407,3 +407,9 @@ msgstr "Lihat semua {$count} artikel terbitan ini"
 
 msgid "plugins.themes.paideia.openIssueEmpty"
 msgstr "Belum ada artikel yang diterbitkan di terbitan ini."
+
+msgid "plugins.themes.paideia.option.colour.label"
+msgstr "Warna utama"
+
+msgid "plugins.themes.paideia.option.colour.description"
+msgstr "Dipakai untuk kepala halaman, tombol, tautan, dan tab."

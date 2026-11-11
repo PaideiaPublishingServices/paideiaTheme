@@ -202,7 +202,7 @@ class Compat
                 if (!$context || !$context->getData('enableAnnouncements')) {
                     return [];
                 }
-                if (class_exists('\PKP\announcement\Announcement') && method_exists('\PKP\announcement\Announcement', 'withActiveByDate')) {
+                if (class_exists('\PKP\announcement\Announcement') && method_exists('\PKP\announcement\Announcement', 'scopeWithActiveByDate')) {
                     $announcements = \PKP\announcement\Announcement::withActiveByDate()
                         ->withContextIds([$context->getId()])
                         ->orderBy(\PKP\announcement\Announcement::CREATED_AT, 'desc')
@@ -236,6 +236,7 @@ class Compat
             }
             return $items;
         } catch (Throwable $e) {
+            error_log('[paideia theme] Avisos: ' . $e->getMessage());
             return [];
         }
     }
