@@ -317,7 +317,7 @@ class PaideiaThemePlugin extends ThemePlugin
                 // Los bloques de la barra lateral van siempre al final de la página.
                 'pdtBlocks' => 'bottom',
                 'pdtTheme' => $this,
-                'pdtRepoUrl' => self::REPO_URL,
+                'pdtRepoUrl' => self::DOCS_URL,
                 'pdtIndexes' => Indexes::active($this, $request->getBaseUrl()),
                 'pdtIndexingCustom' => $this->localizedOption('pdtIndexing'),
                 'pdtIndexingPosition' => $this->getOption('pdtIndexingPosition') === 'bottom' ? 'bottom' : 'top',
