@@ -425,6 +425,8 @@ class PaideiaThemePlugin extends ThemePlugin
             . ';--pdt-primary-ink:' . $palette['ink']
             . ';--pdt-primary-dm:' . $palette['dark']
             . ';--pdt-on-primary-dm:' . $palette['onDark']
+            . ';--pdt-primary-hover-l:' . $palette['hover']
+            . ';--pdt-primary-hover-dm:' . $palette['darkHover']
             . ';--pdt-accent:' . $accent
             . ';--pdt-font-heading:' . $fonts[0] . ';--pdt-font-body:' . $fonts[1] . ';}';
     }

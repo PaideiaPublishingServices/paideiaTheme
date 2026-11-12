@@ -47,6 +47,10 @@ class Colors
             // hace falta para leerse sobre el fondo oscuro.
             'dark' => $dark,
             'onDark' => self::onColor($dark),
+            // Botones al pasar el mouse: los colores oscuros se aclaran y los
+            // claros se oscurecen, así el cambio se nota siempre.
+            'hover' => self::hoverOf($primary),
+            'darkHover' => self::hoverOf($dark),
         ];
     }
 
@@ -68,6 +72,19 @@ class Colors
             }
         }
         return $direction > 0 ? '#ffffff' : '#000000';
+    }
+
+    public static function hoverOf(string $hex): string
+    {
+        return self::luminance($hex) < 0.18 ? self::mix($hex, '#ffffff', 0.16) : self::mix($hex, '#000000', 0.14);
+    }
+
+    /** Mezcla $hex con $with en la proporción $amount (0..1). */
+    public static function mix(string $hex, string $with, float $amount): string
+    {
+        $a = self::toRgb($hex);
+        $b = self::toRgb($with);
+        return vsprintf('#%02x%02x%02x', array_map(fn ($x, $y) => (int) round($x + ($y - $x) * $amount), $a, $b));
     }
 
     /** Blanco o casi negro, el que más contraste tenga sobre el color. */
