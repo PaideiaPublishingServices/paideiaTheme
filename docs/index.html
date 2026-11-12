@@ -258,6 +258,14 @@
 			<details><summary>¿Conviene usar el bloque lateral para los logos de indexación?</summary><p>Mejor no: cargue los índices en las opciones del tema. Los bloques laterales necesitan HTML y estilos propios; el bloque «Indexada en» del tema se ve prolijo sin tocar código.</p></details>
 			<details><summary>¿El aviso de cookies bloquea Google Analytics?</summary><p>No bloquea scripts por sí mismo. Guarda la elección del lector y avisa con el evento <code>pdt:cookies</code>, para que la analítica u otros servicios esperen el consentimiento.</p></details>
 			<details><summary>¿Envía datos a terceros?</summary><p>Las fuentes son locales y no hay scripts de terceros. Sólo si se activan: «Citado por» consulta OpenAlex desde el servidor (envía únicamente el DOI) y Crossmark carga el script de Crossref.</p></details>
+			<details><summary>¿Cómo armo las columnas del pie de página?</summary><p>El pie se escribe donde siempre: <strong>Ajustes → Sitio web → Apariencia → Configuración → Pie de página</strong>. Como el editor no tiene botón de línea horizontal, abra el código con el botón <code>&lt;&gt;</code> y escriba <code>&lt;hr&gt;</code> entre una columna y otra. Por ejemplo, tres columnas:</p><pre><code>&lt;h4&gt;Contacto&lt;/h4&gt;
+&lt;p&gt;Instituto Ejemplo · revista@example.org&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Políticas&lt;/h4&gt;
+&lt;p&gt;Acceso abierto, ética y preservación.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Licencia&lt;/h4&gt;
+&lt;p&gt;Contenidos bajo CC BY 4.0.&lt;/p&gt;</code></pre><p>Si no hay líneas pero hay dos o más títulos, cada título abre una columna. La columna con el nombre, el ISSN, la editorial y los enlaces de la revista la agrega el tema (opción «Pie de página» del tema): no hace falta repetirla. «Columnas del pie de página» fija cuántas entran por fila; las que sobran pasan a la fila siguiente.</p></details>
 		</div>
 	</div>
 </section>

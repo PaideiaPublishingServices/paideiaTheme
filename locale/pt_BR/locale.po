@@ -381,7 +381,7 @@ msgid "plugins.themes.paideia.option.seo.tooltip"
 msgstr "JSON-LD (schema.org), Open Graph, link canônico e citation_fulltext_html_url. Complementa os plugins Google Scholar e Dublin Core, não os substitui."
 
 msgid "plugins.themes.paideia.option.footerColumns.tooltip"
-msgstr "O conteúdo do rodapé é editado em Aparência → Configuração → Rodapé. Cada linha horizontal (ou cada título) inicia uma coluna."
+msgstr "O conteúdo do rodapé é editado em Aparência → Configuração → Rodapé. Para separar colunas, abra o código com o botão ‹/› do editor e escreva ‹hr› entre uma coluna e outra (ou comece cada uma com um título ‹h4›). Se houver mais colunas que as escolhidas, as que sobram passam para uma segunda linha."
 
 msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
 msgstr "Nome, ISSN, editora e links para Sobre, Submissões, Arquivo e Contato, tirados da configuração da revista."

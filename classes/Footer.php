@@ -30,9 +30,12 @@ class Footer
         $context = $request->getContext();
         $identity = $withIdentity && $context ? self::identity($request, $context) : null;
         $columns = self::columns((string) $templateMgr->getTemplateVars('pageFooter'));
-        // Con 2 columnas, la identidad y los enlaces van juntos; con 3 o más,
-        // los enlaces ocupan su propia columna.
-        $separateLinks = $identity && $grid >= 3;
+        // Los enlaces van en su propia columna sólo si la identidad tiene
+        // datos además del nombre (ISSN, editorial) y si así todo entra en
+        // una fila; si no, van debajo del nombre y no queda una columna casi
+        // vacía ni una columna suelta en la fila siguiente.
+        $hasFacts = $identity && ($identity['onlineIssn'] || $identity['printIssn'] || $identity['publisher']);
+        $separateLinks = $hasFacts && $grid >= 3 && (2 + count($columns)) <= $grid;
         return [
             'identity' => $identity,
             'separateLinks' => $separateLinks,

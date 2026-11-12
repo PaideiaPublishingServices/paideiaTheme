@@ -67,7 +67,22 @@ Las diferencias entre versiones se resuelven en `classes/Compat.php`.
 
 ### Pie de página en columnas
 
-El contenido se edita en *Apariencia → Configuración → Pie de página*. Cada línea horizontal (`<hr>`) abre una columna; si no hay líneas pero hay dos o más títulos (h2–h4), cada título abre una columna.
+El contenido se edita en *Ajustes → Sitio web → Apariencia → Configuración → Pie de página*. El editor de OJS no tiene botón de línea horizontal: use el botón de código (`<>`) y escriba `<hr>` entre una columna y otra. Por ejemplo, para tres columnas:
+
+```html
+<h4>Contacto</h4>
+<p>Instituto Ejemplo<br>Calle 123, Ciudad<br>revista@example.org</p>
+<hr>
+<h4>Políticas</h4>
+<p>Acceso abierto, ética y preservación digital.</p>
+<hr>
+<h4>Licencia</h4>
+<p>Contenidos bajo CC BY 4.0.</p>
+```
+
+Si no hay líneas pero hay dos o más títulos (h2–h4), cada título abre una columna. Si no hay ni líneas ni títulos, todo va en una columna.
+
+Con la opción *Pie de página* del tema marcada, el tema agrega antes una columna con el nombre, el ISSN, la editorial y los enlaces a Acerca de, Envíos, Archivo y Contacto (no hace falta repetirlos en el pie). Los enlaces van en una columna propia sólo si la revista tiene ISSN o editorial cargados y todo entra en una fila. *Columnas del pie de página* fija cuántas columnas hay por fila en pantallas anchas; si el contenido tiene más, las que sobran pasan a una segunda fila.
 
 ### Texto completo inline
 

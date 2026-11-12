@@ -14,6 +14,15 @@ STRINGS = {}
 
 # ---------------------------------------------------------------- Español
 STRINGS['es'] = {
+    'q8': '¿Cómo armo las columnas del pie de página?',
+    'a8': 'El pie se escribe donde siempre: <strong>Ajustes → Sitio web → Apariencia → Configuración → Pie de página</strong>. Como el editor no tiene botón de línea horizontal, abra el código con el botón <code>&lt;&gt;</code> y escriba <code>&lt;hr&gt;</code> entre una columna y otra. Por ejemplo, tres columnas:',
+    'a8c1': 'Contacto',
+    'a8c1t': 'Instituto Ejemplo · revista@example.org',
+    'a8c2': 'Políticas',
+    'a8c2t': 'Acceso abierto, ética y preservación.',
+    'a8c3': 'Licencia',
+    'a8c3t': 'Contenidos bajo CC BY 4.0.',
+    'a8b': 'Si no hay líneas pero hay dos o más títulos, cada título abre una columna. La columna con el nombre, el ISSN, la editorial y los enlaces de la revista la agrega el tema (opción «Pie de página» del tema): no hace falta repetirla. «Columnas del pie de página» fija cuántas entran por fila; las que sobran pasan a la fila siguiente.',
     'title': 'Tema para OJS',
     'metaDescription': 'Paideia Theme es un tema gratuito para Open Journal Systems 3.4 y 3.5: página de artículo de revista indexada, texto completo HTML, publicación continua, indexación y SEO. Guía de instalación y configuración.',
     'ogDescription': 'Tema gratuito para Open Journal Systems, por Paideia Studio. Guía con capturas.',
@@ -123,6 +132,15 @@ STRINGS['es'] = {
 
 # ---------------------------------------------------------------- English
 STRINGS['en'] = {
+    'q8': 'How do I set up the footer columns?',
+    'a8': 'The footer is written where it always is: <strong>Settings → Website → Appearance → Setup → Page footer</strong>. The editor has no horizontal-rule button, so open the source code with the <code>&lt;&gt;</code> button and type <code>&lt;hr&gt;</code> between columns. For example, three columns:',
+    'a8c1': 'Contact',
+    'a8c1t': 'Example Institute · journal@example.org',
+    'a8c2': 'Policies',
+    'a8c2t': 'Open access, ethics and preservation.',
+    'a8c3': 'License',
+    'a8c3t': 'Content under CC BY 4.0.',
+    'a8b': 'Without rules but with two or more headings, each heading starts a column. The column with the journal name, ISSN, publisher and links is added by the theme (theme option “Footer”): no need to repeat it. “Footer columns” sets how many fit in a row; extra ones move to the next row.',
     'title': 'OJS theme',
     'metaDescription': 'Paideia Theme is a free theme for Open Journal Systems 3.4 and 3.5: indexed-journal article page, HTML full text, continuous publication, indexing and SEO. Installation and configuration guide.',
     'ogDescription': 'Free theme for Open Journal Systems, by Paideia Studio. Guide with screenshots.',
@@ -232,6 +250,15 @@ STRINGS['en'] = {
 
 # ---------------------------------------------------------------- Português (Brasil)
 STRINGS['pt'] = {
+    'q8': 'Como monto as colunas do rodapé?',
+    'a8': 'O rodapé é escrito onde sempre: <strong>Configurações → Website → Aparência → Configuração → Rodapé</strong>. Como o editor não tem botão de linha horizontal, abra o código com o botão <code>&lt;&gt;</code> e escreva <code>&lt;hr&gt;</code> entre uma coluna e outra. Por exemplo, três colunas:',
+    'a8c1': 'Contato',
+    'a8c1t': 'Instituto Exemplo · revista@example.org',
+    'a8c2': 'Políticas',
+    'a8c2t': 'Acesso aberto, ética e preservação.',
+    'a8c3': 'Licença',
+    'a8c3t': 'Conteúdo sob CC BY 4.0.',
+    'a8b': 'Sem linhas, mas com dois ou mais títulos, cada título abre uma coluna. A coluna com o nome, o ISSN, a editora e os links da revista é adicionada pelo tema (opção «Rodapé» do tema): não é preciso repeti-la. «Colunas do rodapé» define quantas cabem por linha; as que sobram passam para a linha seguinte.',
     'title': 'Tema para OJS',
     'metaDescription': 'Paideia Theme é um tema gratuito para Open Journal Systems 3.4 e 3.5: página de artigo de revista indexada, texto completo HTML, publicação contínua, indexação e SEO. Guia de instalação e configuração.',
     'ogDescription': 'Tema gratuito para Open Journal Systems, da Paideia Studio. Guia com capturas de tela.',
@@ -341,6 +368,15 @@ STRINGS['pt'] = {
 
 # ---------------------------------------------------------------- Bahasa Indonesia
 STRINGS['id'] = {
+    'q8': 'Bagaimana mengatur kolom kaki halaman?',
+    'a8': 'Kaki halaman ditulis di tempat biasa: <strong>Pengaturan → Situs Web → Tampilan → Pengaturan → Footer halaman</strong>. Editor tidak punya tombol garis horizontal, jadi buka kode sumber dengan tombol <code>&lt;&gt;</code> dan tulis <code>&lt;hr&gt;</code> di antara kolom. Contoh, tiga kolom:',
+    'a8c1': 'Kontak',
+    'a8c1t': 'Institut Contoh · jurnal@example.org',
+    'a8c2': 'Kebijakan',
+    'a8c2t': 'Akses terbuka, etika, dan preservasi.',
+    'a8c3': 'Lisensi',
+    'a8c3t': 'Konten di bawah CC BY 4.0.',
+    'a8b': 'Tanpa garis tetapi dengan dua judul atau lebih, setiap judul memulai kolom. Kolom berisi nama, ISSN, penerbit, dan tautan jurnal ditambahkan oleh tema (opsi tema “Footer”): tidak perlu diulang. “Kolom footer” menentukan jumlah kolom per baris; sisanya pindah ke baris berikutnya.',
     'title': 'Tema untuk OJS',
     'metaDescription': 'Paideia Theme adalah tema gratis untuk Open Journal Systems 3.4 dan 3.5: halaman artikel jurnal terindeks, teks lengkap HTML, publikasi berkelanjutan, pengindeksan, dan SEO. Panduan pemasangan dan konfigurasi.',
     'ogDescription': 'Tema gratis untuk Open Journal Systems, dari Paideia Studio. Panduan dengan tangkapan layar.',

@@ -381,7 +381,7 @@ msgid "plugins.themes.paideia.option.seo.tooltip"
 msgstr "JSON-LD (schema.org), Open Graph, enlace canónico y citation_fulltext_html_url. Complementa los plugins Google Scholar y Dublin Core, no los reemplaza."
 
 msgid "plugins.themes.paideia.option.footerColumns.tooltip"
-msgstr "El contenido del pie se edita en Apariencia → Configuración → Pie de página. Cada línea horizontal (o cada título) inicia una columna."
+msgstr "El contenido del pie se edita en Apariencia → Configuración → Pie de página. Para separar columnas, abra el código con el botón ‹/› del editor y escriba ‹hr› entre una columna y otra (o use un título ‹h4› al comienzo de cada una). Si hay más columnas que las elegidas, las que sobran pasan a una segunda fila."
 
 msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
 msgstr "Nombre, ISSN, editorial y enlaces a Acerca de, Envíos, Archivo y Contacto, tomados de la configuración de la revista."

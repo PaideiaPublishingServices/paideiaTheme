@@ -47,7 +47,7 @@
 	<div class="pkp_structure_footer">
 
 		{if $pdtFooter.identity || $pdtFooter.columns}
-			<div class="pkp_footer_content pdt-footer__grid pdt-footer__grid--{$pdtFooter.grid|escape}">
+			<div class="pkp_footer_content pdt-footer__grid pdt-footer__grid--{$pdtFooter.grid|escape}{if $pdtFooter.separateLinks} pdt-footer__grid--nav{/if}">
 				{if $pdtFooter.identity}
 					{assign var="pdtId" value=$pdtFooter.identity}
 					<div class="pdt-footer__col pdt-footer__identity">

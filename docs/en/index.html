@@ -258,6 +258,14 @@
 			<details><summary>Should I use a sidebar block for indexing logos?</summary><p>Better not: add the indexes in the theme options. Sidebar blocks need their own HTML and styles; the theme's “Indexed in” block looks tidy without any code.</p></details>
 			<details><summary>Does the cookie notice block Google Analytics?</summary><p>It does not block scripts by itself. It stores the reader's choice and fires the <code>pdt:cookies</code> event, so analytics or other services can wait for consent.</p></details>
 			<details><summary>Does it send data to third parties?</summary><p>Fonts are local and there are no third-party scripts. Only when enabled: “Cited by” queries OpenAlex from the server (sending only the DOI) and Crossmark loads the Crossref script.</p></details>
+			<details><summary>How do I set up the footer columns?</summary><p>The footer is written where it always is: <strong>Settings → Website → Appearance → Setup → Page footer</strong>. The editor has no horizontal-rule button, so open the source code with the <code>&lt;&gt;</code> button and type <code>&lt;hr&gt;</code> between columns. For example, three columns:</p><pre><code>&lt;h4&gt;Contact&lt;/h4&gt;
+&lt;p&gt;Example Institute · journal@example.org&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Policies&lt;/h4&gt;
+&lt;p&gt;Open access, ethics and preservation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;License&lt;/h4&gt;
+&lt;p&gt;Content under CC BY 4.0.&lt;/p&gt;</code></pre><p>Without rules but with two or more headings, each heading starts a column. The column with the journal name, ISSN, publisher and links is added by the theme (theme option “Footer”): no need to repeat it. “Footer columns” sets how many fit in a row; extra ones move to the next row.</p></details>
 		</div>
 	</div>
 </section>

@@ -129,3 +129,5 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 .contact .more { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; justify-content: space-between; color: var(--soft); }
 p:empty { display: none; }
 @media (max-width: 420px) { .brand { font-size: .95rem; gap: .4rem; } .lang a { min-width: 1.8rem; padding: .2rem .3rem; } }
+details pre { margin: .7rem 0 0; padding: .8rem 1rem; border-radius: 8px; background: var(--surface-2); overflow-x: auto; font: 500 .82rem/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
+details pre code { background: none; padding: 0; }

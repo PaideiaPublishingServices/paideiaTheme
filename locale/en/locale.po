@@ -381,7 +381,7 @@ msgid "plugins.themes.paideia.option.seo.tooltip"
 msgstr "JSON-LD (schema.org), Open Graph, canonical link and citation_fulltext_html_url. It complements the Google Scholar and Dublin Core plugins; it does not replace them."
 
 msgid "plugins.themes.paideia.option.footerColumns.tooltip"
-msgstr "Footer content is edited in Appearance → Setup → Page footer. Each horizontal rule (or each heading) starts a column."
+msgstr "Footer content is edited in Appearance → Setup → Page footer. To split it into columns, open the source code with the editor's ‹/› button and type ‹hr› between columns (or start each column with an ‹h4› heading). If there are more columns than selected, the extra ones move to a second row."
 
 msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
 msgstr "Name, ISSN, publisher and links to About, Submissions, Archive and Contact, taken from the journal settings."

@@ -381,7 +381,7 @@ msgid "plugins.themes.paideia.option.seo.tooltip"
 msgstr "JSON-LD (schema.org), Open Graph, tautan kanonis, dan citation_fulltext_html_url. Melengkapi plugin Google Scholar dan Dublin Core, bukan menggantikannya."
 
 msgid "plugins.themes.paideia.option.footerColumns.tooltip"
-msgstr "Isi footer diedit di Tampilan → Pengaturan → Footer halaman. Setiap garis horizontal (atau setiap judul) memulai kolom baru."
+msgstr "Isi footer diedit di Tampilan → Pengaturan → Footer halaman. Untuk membagi kolom, buka kode sumber dengan tombol ‹/› di editor dan tulis ‹hr› di antara kolom (atau awali setiap kolom dengan judul ‹h4›). Jika kolom lebih banyak dari yang dipilih, sisanya pindah ke baris kedua."
 
 msgid "plugins.themes.paideia.option.footerIdentity.tooltip"
 msgstr "Nama, ISSN, penerbit, dan tautan ke Tentang, Penyerahan, Arsip, dan Kontak, diambil dari pengaturan jurnal."

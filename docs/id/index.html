@@ -258,6 +258,14 @@
 			<details><summary>Sebaiknya memakai blok samping untuk logo pengindeks?</summary><p>Sebaiknya tidak: tambahkan pengindeks di opsi tema. Blok samping memerlukan HTML dan gaya sendiri; blok “Terindeks di” milik tema tampil rapi tanpa kode.</p></details>
 			<details><summary>Apakah pemberitahuan cookie memblokir Google Analytics?</summary><p>Tidak memblokir skrip dengan sendirinya. Pemberitahuan menyimpan pilihan pembaca dan memicu peristiwa <code>pdt:cookies</code>, sehingga analitik atau layanan lain dapat menunggu persetujuan.</p></details>
 			<details><summary>Apakah mengirim data ke pihak ketiga?</summary><p>Font bersifat lokal dan tidak ada skrip pihak ketiga. Hanya jika diaktifkan: “Dikutip oleh” menghubungi OpenAlex dari server (hanya mengirim DOI) dan Crossmark memuat skrip Crossref.</p></details>
+			<details><summary>Bagaimana mengatur kolom kaki halaman?</summary><p>Kaki halaman ditulis di tempat biasa: <strong>Pengaturan → Situs Web → Tampilan → Pengaturan → Footer halaman</strong>. Editor tidak punya tombol garis horizontal, jadi buka kode sumber dengan tombol <code>&lt;&gt;</code> dan tulis <code>&lt;hr&gt;</code> di antara kolom. Contoh, tiga kolom:</p><pre><code>&lt;h4&gt;Kontak&lt;/h4&gt;
+&lt;p&gt;Institut Contoh · jurnal@example.org&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Kebijakan&lt;/h4&gt;
+&lt;p&gt;Akses terbuka, etika, dan preservasi.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Lisensi&lt;/h4&gt;
+&lt;p&gt;Konten di bawah CC BY 4.0.&lt;/p&gt;</code></pre><p>Tanpa garis tetapi dengan dua judul atau lebih, setiap judul memulai kolom. Kolom berisi nama, ISSN, penerbit, dan tautan jurnal ditambahkan oleh tema (opsi tema “Footer”): tidak perlu diulang. “Kolom footer” menentukan jumlah kolom per baris; sisanya pindah ke baris berikutnya.</p></details>
 		</div>
 	</div>
 </section>

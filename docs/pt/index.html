@@ -258,6 +258,14 @@
 			<details><summary>Convém usar o bloco lateral para os logos de indexação?</summary><p>Melhor não: cadastre os indexadores nas opções do tema. Os blocos laterais precisam de HTML e estilos próprios; o bloco «Indexada em» do tema fica organizado sem mexer em código.</p></details>
 			<details><summary>O aviso de cookies bloqueia o Google Analytics?</summary><p>Não bloqueia scripts por si só. Guarda a escolha do leitor e avisa com o evento <code>pdt:cookies</code>, para que a análise ou outros serviços aguardem o consentimento.</p></details>
 			<details><summary>Envia dados a terceiros?</summary><p>As fontes são locais e não há scripts de terceiros. Só se forem ativados: «Citado por» consulta o OpenAlex pelo servidor (envia apenas o DOI) e o Crossmark carrega o script da Crossref.</p></details>
+			<details><summary>Como monto as colunas do rodapé?</summary><p>O rodapé é escrito onde sempre: <strong>Configurações → Website → Aparência → Configuração → Rodapé</strong>. Como o editor não tem botão de linha horizontal, abra o código com o botão <code>&lt;&gt;</code> e escreva <code>&lt;hr&gt;</code> entre uma coluna e outra. Por exemplo, três colunas:</p><pre><code>&lt;h4&gt;Contato&lt;/h4&gt;
+&lt;p&gt;Instituto Exemplo · revista@example.org&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Políticas&lt;/h4&gt;
+&lt;p&gt;Acesso aberto, ética e preservação.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4&gt;Licença&lt;/h4&gt;
+&lt;p&gt;Conteúdo sob CC BY 4.0.&lt;/p&gt;</code></pre><p>Sem linhas, mas com dois ou mais títulos, cada título abre uma coluna. A coluna com o nome, o ISSN, a editora e os links da revista é adicionada pelo tema (opção «Rodapé» do tema): não é preciso repeti-la. «Colunas do rodapé» define quantas cabem por linha; as que sobram passam para a linha seguinte.</p></details>
 		</div>
 	</div>
 </section>
