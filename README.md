@@ -109,6 +109,10 @@ Hook::add('PaideiaTheme::articleFulltext', function (string $hookName, array $ar
 
 Muestra un aviso con "Aceptar" y "Sólo necesarias" y guarda la elección en el navegador. El tema no bloquea scripts de terceros: los servicios de analítica deben esperar el evento `pdt:cookies` o leer `document.documentElement.dataset.pdtCookies`.
 
+### Caché
+
+Las pestañas del inicio, el número en curso, los artículos relacionados y "Citado por" se guardan en la caché de datos de OJS. Se renuevan solos al publicar, editar, despublicar o borrar un artículo, y se vacían con *Administración → Borrar caché de datos*.
+
 ## Crédito y licencia
 
 Software libre bajo la **GPL v3** con un **término adicional (sección 7b)**: todo sitio que lo use debe mantener visible el crédito del pie de página. Ver `LICENSE`.

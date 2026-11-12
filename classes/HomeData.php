@@ -25,7 +25,6 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector as IssueCollector;
 use APP\submission\Submission;
-use PKP\core\Core;
 use PKP\submission\Collector as SubmissionCollector;
 use Throwable;
 
@@ -36,6 +35,7 @@ class HomeData
 
     public static function build($context, array $options): array
     {
+        self::removeLegacyCache();
         $locale = ArticleData::currentLocale();
         $out = [
             'layout' => $options['layout'] ?? 'issue',
@@ -60,22 +60,22 @@ class HomeData
             $tabs['downloaded'] = fn () => self::topIds($context, Application::ASSOC_TYPE_SUBMISSION_FILE);
         }
 
-        $cached = self::cacheGet($context->getId(), $locale);
-        foreach ($tabs as $key => $loader) {
-            if (isset($cached[$key])) {
-                $out['tabs'][$key] = $cached[$key];
-                continue;
+        // En caché por idioma y por huella del contenido publicado: cualquier
+        // alta, baja o edición de un artículo publicado invalida la caché.
+        $key = 'home.' . (int) $context->getId() . '.' . Compat::cacheLocale($locale) . '.' . Compat::contentFingerprint((int) $context->getId()) . '.' . implode('-', array_keys($tabs));
+        $out['tabs'] = Compat::remember($key, self::CACHE_TTL, function () use ($tabs, $context) {
+            $result = [];
+            foreach ($tabs as $tab => $loader) {
+                try {
+                    $result[$tab] = self::cards($loader(), $context);
+                } catch (Throwable $e) {
+                    error_log('[paideia theme] Pestaña ' . $tab . ': ' . $e->getMessage());
+                    $result[$tab] = [];
+                }
             }
-            try {
-                $out['tabs'][$key] = self::cards($loader(), $context);
-            } catch (Throwable $e) {
-                error_log('[paideia theme] Pestaña ' . $key . ': ' . $e->getMessage());
-                $out['tabs'][$key] = [];
-            }
-        }
-        // Las pestañas sin artículos (por ejemplo, sin estadísticas aún) no se muestran.
-        $out['tabs'] = array_filter($out['tabs'], fn ($cards, $key) => $key === 'recent' || count($cards), ARRAY_FILTER_USE_BOTH);
-        self::cacheSet($context->getId(), $locale, $out['tabs']);
+            // Las pestañas sin artículos (por ejemplo, sin estadísticas aún) no se muestran.
+            return array_filter($result, fn ($cards, $tab) => $tab === 'recent' || count($cards), ARRAY_FILTER_USE_BOTH);
+        });
 
         return $out;
     }
@@ -100,18 +100,12 @@ class HomeData
                 ->filterByStatus([Submission::STATUS_PUBLISHED])
                 ->getIds()
                 ->all();
-            $file = str_replace('.json', '-open.json', self::cacheFile($context->getId(), ArticleData::currentLocale()));
-            $key = md5(implode(',', $ids));
-            $cached = is_readable($file) && filemtime($file) >= time() - self::CACHE_TTL
-                ? json_decode((string) file_get_contents($file), true)
-                : null;
-            if (is_array($cached) && ($cached['key'] ?? '') === $key) {
-                $cards = (array) $cached['cards'];
-            } else {
+            $key = 'home-open.' . (int) $context->getId() . '.' . Compat::cacheLocale(ArticleData::currentLocale()) . '.' . (int) $issue->getId() . '.' . Compat::contentFingerprint((int) $context->getId());
+            $cards = Compat::remember($key, self::CACHE_TTL, function () use ($ids, $context) {
                 $cards = self::cards(array_map(fn ($id) => ['id' => (int) $id, 'metric' => null], $ids), $context);
                 usort($cards, fn ($a, $b) => strcmp((string) $b['datePublished'], (string) $a['datePublished']));
-                @file_put_contents($file, json_encode(['key' => $key, 'cards' => $cards], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
-            }
+                return $cards;
+            });
             return [
                 'id' => $issue->getId(),
                 'label' => strip_tags((string) $issue->getIssueIdentification()),
@@ -290,32 +284,18 @@ class HomeData
         return $node;
     }
 
-    // ----------------------------------------------------------------------
-    // Caché en archivo (cache/ de OJS). Simple a propósito: funciona igual en
-    // 3.4 y 3.5 y no depende del driver de caché configurado.
-    // ----------------------------------------------------------------------
-
-    protected static function cacheFile(int $contextId, string $locale): string
+    /**
+     * Hasta 1.0.3 la caché eran archivos cache/pdt-*.json que no se borraban
+     * con "Borrar caché de datos". Se eliminan una vez.
+     */
+    protected static function removeLegacyCache(): void
     {
-        return Core::getBaseDir() . '/cache/pdt-home-' . $contextId . '-' . preg_replace('/[^a-zA-Z_@]/', '', $locale) . '.json';
-    }
-
-    protected static function cacheGet(int $contextId, string $locale): array
-    {
-        $file = self::cacheFile($contextId, $locale);
-        if (!is_readable($file) || filemtime($file) < time() - self::CACHE_TTL) {
-            return [];
-        }
-        $data = json_decode((string) file_get_contents($file), true);
-        return is_array($data) ? $data : [];
-    }
-
-    protected static function cacheSet(int $contextId, string $locale, array $data): void
-    {
-        $file = self::cacheFile($contextId, $locale);
-        if (is_readable($file) && filemtime($file) >= time() - self::CACHE_TTL) {
+        if (Compat::cacheGet('legacy-cache-removed')) {
             return;
         }
-        @file_put_contents($file, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
+        foreach (glob(\PKP\core\Core::getBaseDir() . '/cache/pdt-*.json') ?: [] as $file) {
+            @unlink($file);
+        }
+        Compat::cachePut('legacy-cache-removed', 1, 30 * 24 * 3600);
     }
 }

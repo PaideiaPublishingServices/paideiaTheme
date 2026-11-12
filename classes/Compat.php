@@ -275,4 +275,92 @@ class Compat
             return [];
         }
     }
+
+    // ----------------------------------------------------------------------
+    // Caché. Usa la caché de datos de OJS (Laravel; existe en 3.4 y 3.5), así
+    // que "Administración → Borrar caché de datos" también la vacía. Las
+    // claves llevan la huella del contenido publicado (contentFingerprint):
+    // al publicar, editar, despublicar o borrar un artículo cambia la clave y
+    // nada viejo se sigue mostrando.
+    // ----------------------------------------------------------------------
+
+    protected static $cacheStore = false;
+
+    protected static function cacheStore()
+    {
+        if (self::$cacheStore === false) {
+            self::$cacheStore = null;
+            try {
+                self::$cacheStore = \PKP\core\PKPContainer::getInstance()['cache']->store();
+            } catch (Throwable $e) {
+                error_log('[paideia theme] Caché no disponible: ' . $e->getMessage());
+            }
+        }
+        return self::$cacheStore;
+    }
+
+    public static function cacheGet(string $key): mixed
+    {
+        try {
+            return self::cacheStore()?->get('paideia.' . $key);
+        } catch (Throwable $e) {
+            return null;
+        }
+    }
+
+    public static function cachePut(string $key, mixed $value, int $ttl): void
+    {
+        try {
+            self::cacheStore()?->put('paideia.' . $key, $value, $ttl);
+        } catch (Throwable $e) {
+            // Sin caché el tema funciona igual, sólo más lento.
+        }
+    }
+
+    public static function remember(string $key, int $ttl, callable $compute): mixed
+    {
+        $value = self::cacheGet($key);
+        if ($value !== null) {
+            return $value;
+        }
+        $value = $compute();
+        self::cachePut($key, $value, $ttl);
+        return $value;
+    }
+
+    /** @var array<int, string> */
+    protected static array $fingerprints = [];
+
+    /**
+     * Huella del contenido publicado de la revista: cuántos artículos hay,
+     * cuáles son y cuándo se modificó por última vez su publicación actual.
+     * Una consulta liviana por request.
+     */
+    public static function contentFingerprint(int $contextId): string
+    {
+        if (!isset(self::$fingerprints[$contextId])) {
+            try {
+                $row = \Illuminate\Support\Facades\DB::table('submissions as s')
+                    ->join('publications as p', 'p.publication_id', '=', 's.current_publication_id')
+                    ->where('s.context_id', $contextId)
+                    ->where('s.status', \APP\submission\Submission::STATUS_PUBLISHED)
+                    ->selectRaw('COUNT(*) AS n, COALESCE(SUM(s.submission_id), 0) AS ids, MAX(p.last_modified) AS modified, MAX(p.date_published) AS published')
+                    ->first();
+                // También la URL base: las tarjetas guardan enlaces absolutos
+                // (http/https, dominio con o sin proxy).
+                $base = (string) \APP\core\Application::get()->getRequest()->getBaseUrl();
+                self::$fingerprints[$contextId] = substr(md5(json_encode($row) . '|' . $base), 0, 12);
+            } catch (Throwable $e) {
+                // Sin huella: la caché sólo vence por tiempo, en ventanas cortas.
+                self::$fingerprints[$contextId] = 't' . intdiv(time(), 600);
+            }
+        }
+        return self::$fingerprints[$contextId];
+    }
+
+    /** Idioma apto para usar en una clave de caché. */
+    public static function cacheLocale(string $locale): string
+    {
+        return (string) preg_replace('/[^a-zA-Z_@]/', '', $locale);
+    }
 }

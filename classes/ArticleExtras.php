@@ -23,7 +23,6 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\DB;
-use PKP\core\Core;
 use Throwable;
 
 class ArticleExtras
@@ -47,12 +46,10 @@ class ArticleExtras
     public static function related($article, $publication, $context): array
     {
         $locale = \PKP\facades\Locale::getLocale();
-        $file = Core::getBaseDir() . '/cache/pdt-related-' . (int) $article->getId() . '-' . preg_replace('/[^a-zA-Z_@]/', '', $locale) . '.json';
-        if (is_readable($file) && filemtime($file) >= time() - self::CACHE_TTL) {
-            $cached = json_decode((string) file_get_contents($file), true);
-            if (is_array($cached)) {
-                return $cached;
-            }
+        $key = 'related.' . (int) $article->getId() . '.' . Compat::cacheLocale($locale) . '.' . Compat::contentFingerprint((int) $context->getId());
+        $cached = Compat::cacheGet($key);
+        if (is_array($cached)) {
+            return $cached;
         }
 
         $ids = [];
@@ -121,7 +118,7 @@ class ArticleExtras
                 'year' => $date ? substr($date, 0, 4) : '',
             ];
         }
-        @file_put_contents($file, json_encode($items, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
+        Compat::cachePut($key, $items, self::CACHE_TTL);
         return $items;
     }
 
@@ -134,13 +131,10 @@ class ArticleExtras
         if ($doi === '' || !preg_match('#^10\.\d{4,9}/\S+$#', $doi)) {
             return null;
         }
-        $file = Core::getBaseDir() . '/cache/pdt-citedby-' . md5($doi) . '.json';
-        if (is_readable($file)) {
-            $cached = json_decode((string) file_get_contents($file), true);
-            $ttl = !empty($cached['error']) ? self::CACHE_TTL_ERROR : self::CACHE_TTL;
-            if (is_array($cached) && filemtime($file) >= time() - $ttl) {
-                return empty($cached['error']) && $cached['count'] > 0 ? $cached : null;
-            }
+        $key = 'citedby.' . md5($doi);
+        $cached = Compat::cacheGet($key);
+        if (is_array($cached)) {
+            return empty($cached['error']) && $cached['count'] > 0 ? $cached : null;
         }
 
         $data = ['count' => 0, 'url' => '', 'works' => [], 'error' => false];
@@ -174,7 +168,8 @@ class ArticleExtras
             // 404 (DOI no indexado todavía) o red caída: se reintenta más tarde.
             $data['error'] = !str_contains($e->getMessage(), '404');
         }
-        @file_put_contents($file, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
+        // Los errores (red, límite de la API) se reintentan antes.
+        Compat::cachePut($key, $data, $data['error'] ? self::CACHE_TTL_ERROR : self::CACHE_TTL);
         return !$data['error'] && $data['count'] > 0 ? $data : null;
     }
 }
