@@ -14,6 +14,10 @@ STRINGS = {}
 
 # ---------------------------------------------------------------- Español
 STRINGS['es'] = {
+    'heroDemo': 'Ver la demo en vivo',
+    'navDemo': 'Demo',
+    'tourDemo': 'Las capturas son de una revista de prueba. Para recorrer la interfaz real, con OJS 3.5:',
+    'tourDemoLink': 'abrir la revista demo →',
     'q8': '¿Cómo armo las columnas del pie de página?',
     'a8': 'El pie se escribe donde siempre: <strong>Ajustes → Sitio web → Apariencia → Configuración → Pie de página</strong>. Como el editor no tiene botón de línea horizontal, abra el código con el botón <code>&lt;&gt;</code> y escriba <code>&lt;hr&gt;</code> entre una columna y otra. Por ejemplo, tres columnas:',
     'a8c1': 'Contacto',
@@ -132,6 +136,10 @@ STRINGS['es'] = {
 
 # ---------------------------------------------------------------- English
 STRINGS['en'] = {
+    'heroDemo': 'See the live demo',
+    'navDemo': 'Demo',
+    'tourDemo': 'Screenshots come from a test journal. To browse the real interface, running OJS 3.5:',
+    'tourDemoLink': 'open the demo journal →',
     'q8': 'How do I set up the footer columns?',
     'a8': 'The footer is written where it always is: <strong>Settings → Website → Appearance → Setup → Page footer</strong>. The editor has no horizontal-rule button, so open the source code with the <code>&lt;&gt;</code> button and type <code>&lt;hr&gt;</code> between columns. For example, three columns:',
     'a8c1': 'Contact',
@@ -250,6 +258,10 @@ STRINGS['en'] = {
 
 # ---------------------------------------------------------------- Português (Brasil)
 STRINGS['pt'] = {
+    'heroDemo': 'Ver a demo ao vivo',
+    'navDemo': 'Demo',
+    'tourDemo': 'As capturas são de uma revista de teste. Para percorrer a interface real, com OJS 3.5:',
+    'tourDemoLink': 'abrir a revista demo →',
     'q8': 'Como monto as colunas do rodapé?',
     'a8': 'O rodapé é escrito onde sempre: <strong>Configurações → Website → Aparência → Configuração → Rodapé</strong>. Como o editor não tem botão de linha horizontal, abra o código com o botão <code>&lt;&gt;</code> e escreva <code>&lt;hr&gt;</code> entre uma coluna e outra. Por exemplo, três colunas:',
     'a8c1': 'Contato',
@@ -368,6 +380,10 @@ STRINGS['pt'] = {
 
 # ---------------------------------------------------------------- Bahasa Indonesia
 STRINGS['id'] = {
+    'heroDemo': 'Lihat demo langsung',
+    'navDemo': 'Demo',
+    'tourDemo': 'Tangkapan layar berasal dari jurnal uji. Untuk menjelajahi antarmuka sebenarnya, dengan OJS 3.5:',
+    'tourDemoLink': 'buka jurnal demo →',
     'q8': 'Bagaimana mengatur kolom kaki halaman?',
     'a8': 'Kaki halaman ditulis di tempat biasa: <strong>Pengaturan → Situs Web → Tampilan → Pengaturan → Footer halaman</strong>. Editor tidak punya tombol garis horizontal, jadi buka kode sumber dengan tombol <code>&lt;&gt;</code> dan tulis <code>&lt;hr&gt;</code> di antara kolom. Contoh, tiga kolom:',
     'a8c1': 'Kontak',

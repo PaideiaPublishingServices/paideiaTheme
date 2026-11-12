@@ -4,6 +4,8 @@ Tema gratuito (GPL v3) para Open Journal Systems con la estética y las funcione
 
 Desarrollado por [Paideia Studio](https://paideiastudio.net/). El tema es libre. El [plan anual de soporte](https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210) incluye acceso a las versiones actualizadas del plugin, soporte ante errores y asesoría de instalación y uso. Otras consultas: **contact [at] paideiastudio.net**.
 
+Demo en vivo (OJS 3.5): **https://ojs35.paideiastudio.com.ar/index.php/demoestilos/**
+
 Guía con capturas: **https://paideiapublishingservices.github.io/paideiaTheme/** (en español, inglés, portugués e indonesio; se genera con `python3 docs/_build/build.py`).
 
 ## Instalación
