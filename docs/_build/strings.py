@@ -14,6 +14,7 @@ STRINGS = {}
 
 # ---------------------------------------------------------------- Español
 STRINGS['es'] = {
+    'perYear': 'por año',
     'heroDemo': 'Ver la demo en vivo',
     'navDemo': 'Demo',
     'tourDemo': 'Las capturas son de una revista de prueba. Para recorrer la interfaz real, con OJS 3.5:',
@@ -136,6 +137,7 @@ STRINGS['es'] = {
 
 # ---------------------------------------------------------------- English
 STRINGS['en'] = {
+    'perYear': 'per year',
     'heroDemo': 'See the live demo',
     'navDemo': 'Demo',
     'tourDemo': 'Screenshots come from a test journal. To browse the real interface, running OJS 3.5:',
@@ -258,6 +260,7 @@ STRINGS['en'] = {
 
 # ---------------------------------------------------------------- Português (Brasil)
 STRINGS['pt'] = {
+    'perYear': 'por ano',
     'heroDemo': 'Ver a demo ao vivo',
     'navDemo': 'Demo',
     'tourDemo': 'As capturas são de uma revista de teste. Para percorrer a interface real, com OJS 3.5:',
@@ -380,6 +383,7 @@ STRINGS['pt'] = {
 
 # ---------------------------------------------------------------- Bahasa Indonesia
 STRINGS['id'] = {
+    'perYear': 'per tahun',
     'heroDemo': 'Lihat demo langsung',
     'navDemo': 'Demo',
     'tourDemo': 'Tangkapan layar berasal dari jurnal uji. Untuk menjelajahi antarmuka sebenarnya, dengan OJS 3.5:',
