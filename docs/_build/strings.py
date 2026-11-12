@@ -14,6 +14,14 @@ STRINGS = {}
 
 # ---------------------------------------------------------------- Español
 STRINGS['es'] = {
+    'q9': '¿Tiene garantía?',
+    'a9': 'Se ofrece tal cual, sin garantía de ningún tipo, según las secciones 15 y 16 de la <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/blob/main/LICENSE">licencia GPL v3</a>. Pruebe cada versión nueva en una copia de su OJS antes de usarla en la revista y mantenga respaldos. La revista es responsable de su declaración de privacidad y de cómo usa el aviso de cookies. El plan anual de soporte es un servicio aparte y no cambia esta condición del software.',
+    'q10': '¿Cómo reporto un error o un problema de seguridad?',
+    'a10': 'Los errores se reportan en <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/issues/new/choose">GitHub</a>, con la versión del tema y de OJS y los pasos para reproducirlo. Los problemas de seguridad, en cambio, no se publican: use el <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/security/policy">reporte privado</a> o escriba a Paideia Studio.',
+    'bugLead': '¿Encontró un error en el tema? Repórtelo en GitHub con la versión de OJS y los pasos para reproducirlo.',
+    'bugBtn': 'Reportar un error',
+    'footBug': 'Reportar un error',
+    'footWarranty': 'Se ofrece sin garantía (GPL v3).',
     'heroDemo': 'Ver la demo en vivo',
     'navDemo': 'Demo',
     'tourDemo': 'Las capturas son de una revista de prueba. Para recorrer la interfaz real, con OJS 3.5:',
@@ -136,6 +144,14 @@ STRINGS['es'] = {
 
 # ---------------------------------------------------------------- English
 STRINGS['en'] = {
+    'q9': 'Is there a warranty?',
+    'a9': 'It is provided as is, without warranty of any kind, under sections 15 and 16 of the <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/blob/main/LICENSE">GPL v3 license</a>. Test each new version on a copy of your OJS before using it on the journal and keep backups. The journal is responsible for its privacy statement and for how it uses the cookie notice. The annual support plan is a separate service and does not change this condition of the software.',
+    'q10': 'How do I report a bug or a security issue?',
+    'a10': 'Report bugs on <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/issues/new/choose">GitHub</a>, with the theme and OJS versions and steps to reproduce. Security issues should not be published: use <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/security/policy">private reporting</a> or write to Paideia Studio.',
+    'bugLead': 'Found a bug in the theme? Report it on GitHub with your OJS version and steps to reproduce.',
+    'bugBtn': 'Report a bug',
+    'footBug': 'Report a bug',
+    'footWarranty': 'Provided without warranty (GPL v3).',
     'heroDemo': 'See the live demo',
     'navDemo': 'Demo',
     'tourDemo': 'Screenshots come from a test journal. To browse the real interface, running OJS 3.5:',
@@ -258,6 +274,14 @@ STRINGS['en'] = {
 
 # ---------------------------------------------------------------- Português (Brasil)
 STRINGS['pt'] = {
+    'q9': 'Tem garantia?',
+    'a9': 'É oferecido como está, sem garantia de nenhum tipo, conforme as seções 15 e 16 da <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/blob/main/LICENSE">licença GPL v3</a>. Teste cada versão nova numa cópia do seu OJS antes de usá-la na revista e mantenha backups. A revista é responsável pela sua declaração de privacidade e pelo uso do aviso de cookies. O plano anual de suporte é um serviço à parte e não muda esta condição do software.',
+    'q10': 'Como reporto um erro ou um problema de segurança?',
+    'a10': 'Os erros são reportados no <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/issues/new/choose">GitHub</a>, com a versão do tema e do OJS e os passos para reproduzi-lo. Os problemas de segurança não devem ser publicados: use o <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/security/policy">reporte privado</a> ou escreva para a Paideia Studio.',
+    'bugLead': 'Encontrou um erro no tema? Reporte no GitHub com a versão do OJS e os passos para reproduzi-lo.',
+    'bugBtn': 'Reportar um erro',
+    'footBug': 'Reportar um erro',
+    'footWarranty': 'Oferecido sem garantia (GPL v3).',
     'heroDemo': 'Ver a demo ao vivo',
     'navDemo': 'Demo',
     'tourDemo': 'As capturas são de uma revista de teste. Para percorrer a interface real, com OJS 3.5:',
@@ -380,6 +404,14 @@ STRINGS['pt'] = {
 
 # ---------------------------------------------------------------- Bahasa Indonesia
 STRINGS['id'] = {
+    'q9': 'Apakah ada garansi?',
+    'a9': 'Tema ini disediakan apa adanya, tanpa garansi apa pun, sesuai bagian 15 dan 16 <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/blob/main/LICENSE">lisensi GPL v3</a>. Uji setiap versi baru pada salinan OJS Anda sebelum dipakai di jurnal dan simpan cadangan. Jurnal bertanggung jawab atas pernyataan privasinya dan cara menggunakan pemberitahuan cookie. Paket dukungan tahunan adalah layanan terpisah dan tidak mengubah ketentuan perangkat lunak ini.',
+    'q10': 'Bagaimana melaporkan bug atau masalah keamanan?',
+    'a10': 'Laporkan bug di <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/issues/new/choose">GitHub</a>, dengan versi tema dan OJS serta langkah untuk mereproduksinya. Masalah keamanan jangan dipublikasikan: gunakan <a href="https://github.com/PaideiaPublishingServices/paideiaTheme/security/policy">pelaporan privat</a> atau hubungi Paideia Studio.',
+    'bugLead': 'Menemukan bug pada tema? Laporkan di GitHub dengan versi OJS dan langkah untuk mereproduksinya.',
+    'bugBtn': 'Laporkan bug',
+    'footBug': 'Laporkan bug',
+    'footWarranty': 'Disediakan tanpa garansi (GPL v3).',
     'heroDemo': 'Lihat demo langsung',
     'navDemo': 'Demo',
     'tourDemo': 'Tangkapan layar berasal dari jurnal uji. Untuk menjelajahi antarmuka sebenarnya, dengan OJS 3.5:',

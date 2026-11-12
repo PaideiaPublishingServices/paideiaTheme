@@ -1,0 +1,70 @@
+name: Reportar un error / Bug report
+description: Algo del tema no funciona como se espera. / Something in the theme does not work as expected.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportarlo. Antes de enviar, revise que el error no esté ya reportado y que use la última versión del tema.
+        **No publique** contraseñas, datos personales ni vulnerabilidades de seguridad: estas últimas se reportan en privado (ver SECURITY.md).
+
+        Thanks for reporting. Please check the issue is not already reported and that you use the latest theme version.
+        **Do not post** passwords, personal data or security vulnerabilities: report those privately (see SECURITY.md).
+  - type: input
+    id: theme
+    attributes:
+      label: Versión del tema / Theme version
+      description: Ajustes → Sitio web → Módulos → Paideia. / Settings → Website → Plugins → Paideia.
+      placeholder: "1.0.2.0"
+    validations:
+      required: true
+  - type: input
+    id: ojs
+    attributes:
+      label: Versión de OJS / OJS version
+      placeholder: "3.5.0.4"
+    validations:
+      required: true
+  - type: input
+    id: php
+    attributes:
+      label: Versión de PHP / PHP version
+      placeholder: "8.2"
+  - type: textarea
+    id: what
+    attributes:
+      label: Qué pasa / What happens
+      description: Qué ve y qué esperaba ver. / What you see and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo / Steps to reproduce
+      placeholder: |
+        1. Ir a … / Go to …
+        2. Hacer clic en … / Click …
+        3. Ver el error / See the error
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Página donde ocurre (opcional) / Page where it happens (optional)
+      description: Una URL pública de la revista, si se puede compartir. / A public journal URL, if it can be shared.
+  - type: input
+    id: browser
+    attributes:
+      label: Navegador y dispositivo / Browser and device
+      placeholder: "Firefox 133, Windows / Safari, iPhone"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Mensajes de error (opcional) / Error messages (optional)
+      description: Del registro de errores de PHP (líneas con "[paideia theme]") o de la consola del navegador. / From the PHP error log (lines with "[paideia theme]") or the browser console.
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas (opcional) / Screenshots (optional)
+      description: Puede arrastrar imágenes aquí. / You can drag images here.

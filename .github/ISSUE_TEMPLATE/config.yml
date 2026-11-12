@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Plan anual de soporte / Annual support plan
+    url: https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210
+    about: Instalación de actualizaciones, soporte ante errores y asesoría. / Update installation, bug support and advice.
+  - name: Documentación / Documentation
+    url: https://paideiapublishingservices.github.io/paideiaTheme/
+    about: Guía de instalación y configuración. / Installation and configuration guide.

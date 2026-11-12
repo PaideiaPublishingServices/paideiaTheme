@@ -1,0 +1,20 @@
+name: Sugerir una mejora / Feature request
+description: Una idea para el tema. / An idea for the theme.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Qué necesita la revista / What the journal needs
+      description: El problema o la necesidad, más que la solución. / The problem or need, rather than the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Cómo se imagina que funcione (opcional) / How you imagine it working (optional)
+  - type: input
+    id: ojs
+    attributes:
+      label: Versión de OJS / OJS version
+      placeholder: "3.4.0.9 / 3.5.0.4"

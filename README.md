@@ -113,6 +113,14 @@ Muestra un aviso con "Aceptar" y "Sólo necesarias" y guarda la elección en el 
 
 Las pestañas del inicio, el número en curso, los artículos relacionados y "Citado por" se guardan en la caché de datos de OJS. Se renuevan solos al publicar, editar, despublicar o borrar un artículo, y se vacían con *Administración → Borrar caché de datos*.
 
+## Reportar errores
+
+Los errores y las sugerencias se reportan en [GitHub Issues](https://github.com/PaideiaPublishingServices/paideiaTheme/issues/new/choose), con la versión del tema, la de OJS y los pasos para reproducirlo. Los problemas de seguridad no se publican: ver [SECURITY.md](.github/SECURITY.md).
+
+## Garantía
+
+Se ofrece tal cual, **sin garantía de ningún tipo** (GPL v3, secciones 15 y 16). Pruebe cada versión en una copia de su OJS antes de usarla en producción y mantenga respaldos. La revista es responsable de su declaración de privacidad y del uso del aviso de cookies. El plan anual de soporte es un servicio aparte y no modifica esta condición.
+
 ## Crédito y licencia
 
 Software libre bajo la **GPL v3** con un **término adicional (sección 7b)**: todo sitio que lo use debe mantener visible el crédito del pie de página. Ver `LICENSE`.
