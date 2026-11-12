@@ -2,7 +2,7 @@
 
 Tema gratuito (GPL v3) para Open Journal Systems con la estética y las funciones de las revistas científicas actuales: página de artículo de revista indexada, texto completo HTML dentro de la página, metadatos SEO completos y modo oscuro. Es un *child theme* del tema Default de OJS.
 
-Desarrollado por [Paideia Studio](https://paideiastudio.net/). El tema es libre. El [plan anual de soporte](https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210) incluye acceso a las versiones actualizadas del plugin, soporte ante errores y asesoría de instalación y uso. Otras consultas: **contact [at] paideiastudio.net**.
+Desarrollado por [Paideia Studio](https://paideiastudio.net/). El tema es libre. El [plan anual de soporte](https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210) incluye la instalación de las actualizaciones, probadas en su OJS, soporte ante errores y asesoría de instalación y uso. Otras consultas: **contact [at] paideiastudio.net**.
 
 Demo en vivo (OJS 3.5): **https://ojs35.paideiastudio.com.ar/index.php/demoestilos/**
 

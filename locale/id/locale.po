@@ -414,7 +414,7 @@ msgid "plugins.themes.paideia.option.support.label"
 msgstr "Dukungan tahunan Paideia Theme"
 
 msgid "plugins.themes.paideia.option.support.description"
-msgstr "Tema ini gratis. Paket dukungan tahunan mencakup akses ke versi plugin terbaru, bantuan untuk bug, serta konsultasi pemasangan dan penggunaan."
+msgstr "Tema ini gratis. Paket dukungan tahunan mencakup pemasangan pembaruan yang sudah diuji di OJS Anda, bantuan untuk bug, serta konsultasi pemasangan dan penggunaan."
 
 msgid "plugins.themes.paideia.option.support.link"
 msgstr "Berlangganan paket dukungan tahunan"
@@ -426,7 +426,7 @@ msgid "plugins.themes.paideia.option.indexingOn.label"
 msgstr "Terindeks di"
 
 msgid "plugins.themes.paideia.option.indexingOn.description"
-msgstr "Menampilkan blok \"Terindeks di\" dengan pengindeks yang dicentang di bawah. Setelah dicentang, muncul kolom untuk tautan ke profil jurnal (opsional, terbuka di tab baru). Sebaiknya gunakan opsi ini, bukan blok kustom di bilah samping."
+msgstr "Menampilkan blok \"Terindeks di\" dengan pengindeks yang dicentang di bawah. Setelah dicentang, muncul kolom tautan ke profil jurnal dan logo, keduanya opsional. Sebaiknya gunakan opsi ini, bukan blok kustom di bilah samping."
 
 msgid "plugins.themes.paideia.option.indexingOn.option"
 msgstr "Tampilkan blok \"Terindeks di\""

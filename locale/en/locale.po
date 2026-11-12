@@ -414,7 +414,7 @@ msgid "plugins.themes.paideia.option.support.label"
 msgstr "Paideia Theme annual support"
 
 msgid "plugins.themes.paideia.option.support.description"
-msgstr "The theme is free. The annual support plan includes access to updated versions of the plugin, help with bugs and advice on installation and use."
+msgstr "The theme is free. The annual support plan includes installing updates, tested on your OJS, help with bugs and advice on installation and use."
 
 msgid "plugins.themes.paideia.option.support.link"
 msgstr "Get the annual support plan"
@@ -426,7 +426,7 @@ msgid "plugins.themes.paideia.option.indexingOn.label"
 msgstr "Indexed in"
 
 msgid "plugins.themes.paideia.option.indexingOn.description"
-msgstr "Shows the \"Indexed in\" block with the indexes ticked below. Ticking an index shows a field for the link to the journal's record (optional, opens in a new tab). Use this option rather than a custom sidebar block."
+msgstr "Shows the \"Indexed in\" block with the indexes ticked below. Ticking an index shows fields for the link to the journal's record and for its logo, both optional. Use this option rather than a custom sidebar block."
 
 msgid "plugins.themes.paideia.option.indexingOn.option"
 msgstr "Show the \"Indexed in\" block"

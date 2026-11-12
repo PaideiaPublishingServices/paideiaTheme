@@ -285,7 +285,7 @@ class HomeData
     }
 
     /**
-     * Hasta 1.0.3 la caché eran archivos cache/pdt-*.json que no se borraban
+     * En versiones de prueba anteriores la caché eran archivos cache/pdt-*.json que no se borraban
      * con "Borrar caché de datos". Se eliminan una vez.
      */
     protected static function removeLegacyCache(): void

@@ -229,7 +229,7 @@ class PaideiaThemePlugin extends ThemePlugin
     }
 
     /**
-     * Antes de 1.0.1 no existía el interruptor de indexación: si la revista
+     * En versiones de prueba anteriores no existía el interruptor de indexación: si la revista
      * ya tenía índices marcados o logos propios, arranca encendido.
      */
     protected function hasLegacyIndexing(): bool

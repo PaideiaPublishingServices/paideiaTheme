@@ -414,7 +414,7 @@ msgid "plugins.themes.paideia.option.support.label"
 msgstr "Suporte anual do Paideia Theme"
 
 msgid "plugins.themes.paideia.option.support.description"
-msgstr "O tema é gratuito. O plano anual de suporte inclui acesso às versões atualizadas do plugin, suporte para erros e assessoria de instalação e uso."
+msgstr "O tema é gratuito. O plano anual de suporte inclui a instalação das atualizações, testadas no seu OJS, suporte para erros e assessoria de instalação e uso."
 
 msgid "plugins.themes.paideia.option.support.link"
 msgstr "Contratar o plano anual de suporte"
@@ -426,7 +426,7 @@ msgid "plugins.themes.paideia.option.indexingOn.label"
 msgstr "Indexada em"
 
 msgid "plugins.themes.paideia.option.indexingOn.description"
-msgstr "Mostra o bloco \"Indexada em\" com os indexadores marcados abaixo. Ao marcar um, aparece o campo para o link do registro da revista (opcional, abre em uma nova aba). Recomenda-se usar esta opção e não um bloco personalizado da barra lateral."
+msgstr "Mostra o bloco \"Indexada em\" com os indexadores marcados abaixo. Ao marcar um, aparecem o link do registro da revista e o logo, ambos opcionais. Recomenda-se usar esta opção e não um bloco personalizado da barra lateral."
 
 msgid "plugins.themes.paideia.option.indexingOn.option"
 msgstr "Mostrar o bloco \"Indexada em\""
