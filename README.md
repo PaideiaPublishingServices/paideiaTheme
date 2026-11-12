@@ -123,7 +123,7 @@ Se ofrece tal cual, **sin garantía de ningún tipo** (GPL v3, secciones 15 y 16
 
 ## Crédito y licencia
 
-Software libre bajo la **GPL v3** con un **término adicional (sección 7b)**: todo sitio que lo use debe mantener visible el crédito del pie de página. Ver `LICENSE`.
+Software libre bajo la **GPL v3** con un **término adicional (sección 7b)**: todo sitio que lo use debe mantener visible el crédito del pie de página: el logo de Paideia Studio con el texto «Theme desarrollado por Paideia Studio» (o su traducción al idioma del sitio), con enlace a paideiastudio.net. Puede adaptarse al estilo del sitio o moverse dentro del pie, pero no quitarse ni ocultarse. Ver `LICENSE`.
 
 El crédito se inyecta desde PHP y el JavaScript del tema verifica que siga visible; si se oculta o se borra, el tema se desactiva en el navegador. No es un DRM: es una forma razonable de acompañar la condición de la licencia.
 

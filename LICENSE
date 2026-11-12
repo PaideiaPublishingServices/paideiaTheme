@@ -16,12 +16,12 @@ ADDITIONAL TERM (GNU GPL version 3, section 7, paragraph b)
 -------------------------------------------------------------------------------
 
 Every website that displays pages produced by this program, or by a work based
-on it, must preserve the author attribution shown in the page footer
-("Theme Paideia · Paideia Studio", or its translation, linked to
-https://paideiastudio.net/). The attribution must remain visible and legible
-on every public page where the program's footer is shown. It may be restyled
-to match the site, translated, or moved within the footer, but not removed,
-hidden, or made illegible.
+on it, must preserve the author attribution shown in the page footer: the
+Paideia Studio logo with the text "Theme developed by Paideia Studio" (or its
+translation into the site's language), linked to https://paideiastudio.net/.
+The attribution must remain visible and legible on every public page where the
+program's footer is shown. It may be restyled to match the site, translated,
+or moved within the footer, but not removed, hidden, or made illegible.
 
 Modified versions must carry prominent notices stating that they were changed
 and the date of the change (GPL v3, section 5(a)), and must not use the name
@@ -34,12 +34,13 @@ informativa; prevalece el texto en inglés
 -------------------------------------------------------------------------------
 
 Todo sitio web que muestre páginas generadas por este programa, o por una obra
-basada en él, debe conservar la atribución de autoría del pie de página
-("Theme Paideia · Paideia Studio", o su traducción, con enlace a
-https://paideiastudio.net/). La atribución debe seguir visible y legible en
-cada página pública donde se muestre el pie de página del programa. Puede
-adaptarse al estilo del sitio, traducirse o moverse dentro del pie, pero no
-quitarse, ocultarse ni volverse ilegible.
+basada en él, debe conservar la atribución de autoría del pie de página: el
+logo de Paideia Studio con el texto "Theme desarrollado por Paideia Studio" (o
+su traducción al idioma del sitio), con enlace a https://paideiastudio.net/.
+La atribución debe seguir visible y legible en cada página pública donde se
+muestre el pie de página del programa. Puede adaptarse al estilo del sitio,
+traducirse o moverse dentro del pie, pero no quitarse, ocultarse ni volverse
+ilegible.
 
 -------------------------------------------------------------------------------
 Third-party components
