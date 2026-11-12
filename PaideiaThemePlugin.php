@@ -34,6 +34,7 @@ use APP\core\Application;
 use APP\plugins\themes\paideia\classes\ArticleData;
 use APP\plugins\themes\paideia\classes\ArticleExtras;
 use APP\plugins\themes\paideia\classes\Branding;
+use APP\plugins\themes\paideia\classes\Colors;
 use APP\plugins\themes\paideia\classes\Compat;
 use APP\plugins\themes\paideia\classes\Footer;
 use APP\plugins\themes\paideia\classes\HomeData;
@@ -418,7 +419,13 @@ class PaideiaThemePlugin extends ThemePlugin
             'system' => ['var(--pdt-font-system)', 'var(--pdt-font-system)'],
             default => ['var(--pdt-font-serif)', 'var(--pdt-font-sans)'],
         };
-        return ':root{--pdt-primary:' . $primary . ';--pdt-accent:' . $accent
+        $palette = Colors::palette($primary);
+        return ':root{--pdt-primary:' . $palette['primary']
+            . ';--pdt-on-primary-l:' . $palette['onPrimary']
+            . ';--pdt-primary-ink:' . $palette['ink']
+            . ';--pdt-primary-dm:' . $palette['dark']
+            . ';--pdt-on-primary-dm:' . $palette['onDark']
+            . ';--pdt-accent:' . $accent
             . ';--pdt-font-heading:' . $fonts[0] . ';--pdt-font-body:' . $fonts[1] . ';}';
     }
 

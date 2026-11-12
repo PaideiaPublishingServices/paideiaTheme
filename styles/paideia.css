@@ -18,6 +18,13 @@
    ========================================================================== */
 :root {
 	--pdt-primary: #1E6292;
+	/* Variantes legibles del color principal: las calcula el tema según el
+	   color elegido (classes/Colors.php). Estos son los valores del azul por
+	   defecto. */
+	--pdt-on-primary-l: #ffffff;
+	--pdt-primary-ink: #1e6292;
+	--pdt-primary-dm: #58a6dd;
+	--pdt-on-primary-dm: #111111;
 	--pdt-accent: #B45309;
 	--pdt-font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
 	--pdt-font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -36,11 +43,11 @@ body.pdt {
 	--pdt-muted: #5c6370;
 	--pdt-border: #dde2e8;
 	--pdt-border-strong: #c3cad4;
-	--pdt-link: color-mix(in srgb, var(--pdt-primary) 88%, #000);
+	--pdt-link: var(--pdt-primary-ink);
 	--pdt-primary-soft: color-mix(in srgb, var(--pdt-primary) 9%, var(--pdt-bg));
 	--pdt-accent-soft: color-mix(in srgb, var(--pdt-accent) 12%, var(--pdt-bg));
-	--pdt-on-primary: #ffffff;
-	--pdt-focus: color-mix(in srgb, var(--pdt-primary) 70%, #000);
+	--pdt-on-primary: var(--pdt-on-primary-l);
+	--pdt-focus: var(--pdt-primary-ink);
 	--pdt-radius: 10px;
 	--pdt-radius-sm: 6px;
 	--pdt-shadow: 0 1px 2px rgb(16 24 40 / .06), 0 1px 3px rgb(16 24 40 / .08);
@@ -62,10 +69,15 @@ body.pdt {
 		--pdt-muted: #9aa3af;
 		--pdt-border: #2a313b;
 		--pdt-border-strong: #3a434f;
-		--pdt-link: color-mix(in srgb, var(--pdt-primary) 45%, #fff);
-		--pdt-primary-soft: color-mix(in srgb, var(--pdt-primary) 22%, var(--pdt-bg));
+		/* En oscuro el color principal pasa a su variante clara: enlaces,
+		   estados activos y botones se leen aunque se haya elegido un color
+		   muy oscuro. */
+		--pdt-primary: var(--pdt-primary-dm);
+		--pdt-on-primary: var(--pdt-on-primary-dm);
+		--pdt-link: var(--pdt-primary-dm);
+		--pdt-primary-soft: color-mix(in srgb, var(--pdt-primary-dm) 16%, var(--pdt-bg));
 		--pdt-accent-soft: color-mix(in srgb, var(--pdt-accent) 22%, var(--pdt-bg));
-		--pdt-focus: color-mix(in srgb, var(--pdt-primary) 40%, #fff);
+		--pdt-focus: var(--pdt-primary-dm);
 		color-scheme: dark;
 	}
 }
@@ -78,10 +90,15 @@ html[data-pdt-dm][data-pdt-scheme="dark"] body.pdt {
 	--pdt-muted: #9aa3af;
 	--pdt-border: #2a313b;
 	--pdt-border-strong: #3a434f;
-	--pdt-link: color-mix(in srgb, var(--pdt-primary) 45%, #fff);
-	--pdt-primary-soft: color-mix(in srgb, var(--pdt-primary) 22%, var(--pdt-bg));
+	/* En oscuro el color principal pasa a su variante clara: enlaces,
+	   estados activos y botones se leen aunque se haya elegido un color
+	   muy oscuro. */
+	--pdt-primary: var(--pdt-primary-dm);
+	--pdt-on-primary: var(--pdt-on-primary-dm);
+	--pdt-link: var(--pdt-primary-dm);
+	--pdt-primary-soft: color-mix(in srgb, var(--pdt-primary-dm) 16%, var(--pdt-bg));
 	--pdt-accent-soft: color-mix(in srgb, var(--pdt-accent) 22%, var(--pdt-bg));
-	--pdt-focus: color-mix(in srgb, var(--pdt-primary) 40%, #fff);
+	--pdt-focus: var(--pdt-primary-dm);
 	color-scheme: dark;
 }
 
@@ -112,6 +129,14 @@ body.pdt :is(h1, h2, h3, h4):where(:not(.pdt-galley--galley *)) {
 }
 :where(body.pdt) a { color: var(--pdt-link); text-underline-offset: .18em; text-decoration-thickness: 1px; }
 :where(body.pdt) a:hover { color: var(--pdt-primary); }
+/* Subrayado: los enlaces dentro de un texto (descripciones, resumen, texto
+   completo, pie, avisos) van subrayados, para no distinguirse sólo por el
+   color (WCAG 1.4.1). Los enlaces sueltos de navegación (títulos, listas,
+   "Ver todos", DOI de las tarjetas) se subrayan al pasar el mouse. */
+body.pdt :is(.pdt-hero__more, .pdt-hero__cover, .pdt-link-more, .pdt-issuefinder__year a, .pdt-footer__links a,
+	.pdt-cardart__doi, .pdt-kicker__issue, .pdt-author__orcid, .pdt-closedissue, .cmp_breadcrumbs a) { text-decoration: none; }
+body.pdt :is(.pdt-hero__more, .pdt-link-more, .pdt-issuefinder__year a, .pdt-footer__links a,
+	.pdt-cardart__doi, .pdt-kicker__issue, .cmp_breadcrumbs a):is(:hover, :focus-visible) { text-decoration: underline; }
 body.pdt :focus-visible {
 	outline: 3px solid var(--pdt-focus);
 	outline-offset: 2px;
