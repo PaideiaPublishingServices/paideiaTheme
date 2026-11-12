@@ -3,141 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paideia · Tema para OJS</title>
-<meta name="description" content="Paideia es un tema gratuito para Open Journal Systems 3.4 y 3.5: página de artículo de revista indexada, texto completo HTML, publicación continua, indexación y SEO. Guía de instalación y configuración.">
-<meta property="og:title" content="Paideia · Tema para OJS 3.4 y 3.5">
+<title>Paideia Theme · Tema para OJS</title>
+<meta name="description" content="Paideia Theme es un tema gratuito para Open Journal Systems 3.4 y 3.5: página de artículo de revista indexada, texto completo HTML, publicación continua, indexación y SEO. Guía de instalación y configuración.">
+<meta property="og:title" content="Paideia Theme · Tema para OJS">
 <meta property="og:description" content="Tema gratuito para Open Journal Systems, por Paideia Studio. Guía con capturas.">
 <meta property="og:image" content="img/home.jpg">
-<style>
-@font-face { font-family: "Inter"; src: url("fonts/inter-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Source Serif 4"; src: url("fonts/source-serif-4-latin-wght-normal.woff2") format("woff2"); font-weight: 200 900; font-display: swap; }
-:root {
-	--bg: #ffffff; --surface: #f5f7fa; --surface-2: #eaf0f6; --text: #16202b; --soft: #3d4a57; --muted: #5d6976;
-	--border: #dde3ea; --primary: #1e6292; --primary-ink: #ffffff; --primary-soft: #e6f0f7; --accent: #b45309;
-	--shadow: 0 1px 2px rgb(16 24 40 / .06), 0 8px 24px rgb(16 24 40 / .08);
-	--sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; --serif: "Source Serif 4", Georgia, serif;
-	color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
-		--bg: #0f1318; --surface: #161b22; --surface-2: #1c232c; --text: #e8edf2; --soft: #c3ccd5; --muted: #95a1ad;
-		--border: #2a333d; --primary: #6db3e4; --primary-ink: #0b1620; --primary-soft: #16283a; --accent: #f59e0b;
-		--shadow: 0 1px 2px rgb(0 0 0 / .4), 0 8px 24px rgb(0 0 0 / .35); color-scheme: dark;
-	}
-}
-:root[data-theme="dark"] {
-	--bg: #0f1318; --surface: #161b22; --surface-2: #1c232c; --text: #e8edf2; --soft: #c3ccd5; --muted: #95a1ad;
-	--border: #2a333d; --primary: #6db3e4; --primary-ink: #0b1620; --primary-soft: #16283a; --accent: #f59e0b;
-	--shadow: 0 1px 2px rgb(0 0 0 / .4), 0 8px 24px rgb(0 0 0 / .35); color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; height: auto; display: block; }
-a { color: var(--primary); text-underline-offset: .18em; }
-h1, h2, h3 { font-family: var(--serif); line-height: 1.15; letter-spacing: -.01em; margin: 0; }
-h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: .6rem; }
-h3 { font-size: 1.25rem; margin-bottom: .35rem; }
-p { margin: 0 0 1rem; }
-code { font: 500 .88em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--surface-2); padding: .1em .35em; border-radius: 5px; }
-.wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
-.eyebrow { font: 700 .74rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: .7rem; }
-.lead { font-size: 1.12rem; color: var(--soft); max-width: 46rem; }
-
-/* Barra superior */
-.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-.top .wrap { display: flex; align-items: center; gap: 1rem; min-height: 60px; }
-.brand { display: flex; align-items: center; gap: .55rem; font: 700 1.05rem var(--sans); color: var(--text); text-decoration: none; margin-right: auto; }
-.brand svg { width: 26px; height: 26px; }
-.top nav { display: flex; gap: 1.2rem; }
-.top nav a { color: var(--soft); text-decoration: none; font: 500 .9rem var(--sans); }
-.top nav a:hover { color: var(--primary); }
-.theme-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer; display: grid; place-items: center; }
-@media (max-width: 860px) { .top nav { display: none; } }
-
-/* Botones */
-.btn { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .6rem 1.2rem; border-radius: 999px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font: 600 .95rem var(--sans); text-decoration: none; cursor: pointer; }
-.btn:hover { border-color: var(--primary); color: var(--primary); }
-.btn--primary { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
-.btn--primary:hover { color: var(--primary-ink); filter: brightness(1.08); }
-
-/* Portada */
-.hero { padding: clamp(3rem, 7vw, 5.5rem) 0 2.5rem; background: radial-gradient(1200px 400px at 80% -10%, var(--primary-soft), transparent 70%); }
-.hero h1 { font-size: clamp(2.3rem, 5.5vw, 4rem); max-width: 22ch; margin-bottom: 1rem; }
-.hero .cta { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.6rem 0 0; }
-.hero-shot { margin-top: 2.8rem; }
-.facts { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; list-style: none; padding: 0; margin: 1.5rem 0 0; color: var(--muted); font: 500 .9rem var(--sans); }
-.facts li::before { content: "✓"; color: var(--primary); font-weight: 700; margin-right: .4rem; }
-
-/* Capturas */
-.shot { margin: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--surface); box-shadow: var(--shadow); }
-.shot img { width: 100%; cursor: zoom-in; }
-.shot figcaption { padding: .7rem 1rem; font: 400 .88rem/1.5 var(--sans); color: var(--muted); border-top: 1px solid var(--border); background: var(--bg); }
-.shot--phone { max-width: 300px; border-radius: 26px; }
-
-/* Secciones */
-section { padding: clamp(3rem, 6vw, 4.5rem) 0; border-top: 1px solid var(--border); }
-.grid { display: grid; gap: 1.5rem; }
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
-.phones { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
-.row { display: grid; gap: 2rem; align-items: center; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); margin-top: 2.5rem; }
-.row--flip { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
-.row--flip > :first-child { order: 2; }
-@media (max-width: 900px) { .row, .row--flip { grid-template-columns: 1fr; } .row--flip > :first-child { order: 0; } }
-.card { border: 1px solid var(--border); border-radius: 14px; padding: 1.3rem 1.4rem; background: var(--bg); }
-.card h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; }
-.card p { color: var(--soft); font-size: .94rem; margin: 0; }
-ul.clean { padding-left: 1.1rem; margin: 0 0 1rem; color: var(--soft); }
-ul.clean li { margin: .3rem 0; }
-
-/* Pasos */
-.steps { counter-reset: step; list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1rem; }
-.steps li { counter-increment: step; position: relative; padding: 1rem 1.2rem 1rem 3.6rem; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
-.steps li::before { content: counter(step); position: absolute; left: 1rem; top: 1rem; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: grid; place-items: center; background: var(--primary); color: var(--primary-ink); font: 700 .9rem var(--sans); }
-
-/* Tabla de opciones */
-.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; margin-top: 1.5rem; }
-table { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 560px; }
-th, td { text-align: left; padding: .7rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
-th { background: var(--surface); font: 700 .78rem var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
-tr:last-child td { border-bottom: 0; }
-td:first-child { font-weight: 600; white-space: nowrap; }
-
-/* Preguntas */
-details { border: 1px solid var(--border); border-radius: 12px; padding: .9rem 1.2rem; background: var(--bg); }
-details + details { margin-top: .7rem; }
-summary { cursor: pointer; font-weight: 600; }
-details p { margin: .7rem 0 0; color: var(--soft); }
-
-/* Contacto y pie */
-.contact { background: var(--surface); }
-.contact .box { display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; align-items: center; justify-content: space-between; }
-footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--border); }
-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
-
-/* Ampliar capturas */
-dialog.zoom { padding: 0; border: 0; background: transparent; max-width: 96vw; max-height: 94vh; }
-dialog.zoom::backdrop { background: rgb(0 0 0 / .78); }
-dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor: zoom-out; }
-</style>
+<link rel="canonical" href="https://paideiapublishingservices.github.io/paideiaTheme/">
+<link rel="alternate" hreflang="es" href="https://paideiapublishingservices.github.io/paideiaTheme/">
+<link rel="alternate" hreflang="en" href="https://paideiapublishingservices.github.io/paideiaTheme/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://paideiapublishingservices.github.io/paideiaTheme/pt/">
+<link rel="alternate" hreflang="id" href="https://paideiapublishingservices.github.io/paideiaTheme/id/">
+<link rel="alternate" hreflang="x-default" href="https://paideiapublishingservices.github.io/paideiaTheme/">
+<link rel="stylesheet" href="assets/docs.css">
 </head>
 <body>
 
 <header class="top">
 	<div class="wrap">
-		<a class="brand" href="#">
+		<a class="brand" href="./">
 			<svg viewBox="0 0 98 100" aria-hidden="true"><path fill="#7FBA34" d="M58.7 0.2 60.0 0.2 60.2 0.9 44.6 18.9 34.3 29.7 28.6 34.5 22.5 38.5 16.5 40.6 11.6 40.6 7.3 38.9 4.1 35.9 3.6 35.0 3.8 34.3 8.2 28.8 13.2 23.8 19.4 18.7 27.9 12.9 38.5 7.1 49.2 2.8 58.7 0.2ZM63.4 4.5 64.5 4.3 66.4 5.7 74.3 13.2 79.9 20.1 85.2 28.1 90.5 38.1 95.3 50.1 97.4 57.7 97.9 61.0 97.2 61.6 94.9 59.3 77.1 43.4 70.1 36.4 64.3 29.6 61.6 25.5 58.8 19.4 58.0 15.8 58.0 13.7 58.6 11.1 59.9 8.3 63.4 4.5ZM0.2 38.5 0.7 38.4 21.9 59.3 29.3 67.8 32.7 72.6 36.5 79.7 37.9 85.6 37.7 88.4 37.2 90.5 35.0 94.2 31.9 97.0 30.5 96.6 24.0 90.5 19.6 85.3 15.5 79.4 11.4 72.6 7.9 65.5 4.4 57.0 1.2 46.6 -0.1 39.2 0.2 38.5ZM80.5 59.3 84.2 59.2 87.0 59.9 89.8 61.4 92.8 64.3 92.9 65.7 88.5 71.2 83.5 76.2 79.2 79.9 69.5 86.6 58.2 92.9 46.6 97.5 38.3 99.7 36.9 99.9 36.4 99.3 52.4 80.9 62.4 70.3 68.1 65.5 74.7 61.3 80.5 59.3Z"/></svg>
-			Paideia
+			<span>Paideia <small>Theme</small></span>
 		</a>
 		<nav aria-label="Secciones">
 			<a href="#incluye">Qué incluye</a>
 			<a href="#instalacion">Instalación</a>
 			<a href="#configuracion">Configuración</a>
 			<a href="#recorrido">Recorrido</a>
-			<a href="#preguntas">Preguntas</a>
+			<a href="#soporte">Soporte</a>
 		</nav>
+		<div class="lang" role="group" aria-label="Idioma">
+			<a href="" hreflang="es" lang="es" title="Español" aria-current="page">ES</a>
+			<a href="en/" hreflang="en" lang="en" title="English">EN</a>
+			<a href="pt/" hreflang="pt-BR" lang="pt-BR" title="Português">PT</a>
+			<a href="id/" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a>
+		</div>
 		<button class="theme-btn" type="button" id="themeBtn" aria-label="Cambiar entre modo claro y oscuro">
 			<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
 		</button>
@@ -149,14 +48,14 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 	<div class="wrap">
 		<p class="eyebrow">Tema gratuito para Open Journal Systems</p>
 		<h1>Una revista científica moderna, sin tocar código</h1>
-		<p class="lead">Paideia es un tema para OJS 3.4 y 3.5 con la página de artículo de las revistas indexadas, texto completo HTML dentro de la página, publicación continua, bloque de indexación y metadatos para buscadores. Se instala como cualquier módulo y se configura desde el panel de OJS.</p>
+		<p class="lead">Paideia Theme es un tema para OJS 3.4 y 3.5 con la página de artículo de las revistas indexadas, texto completo HTML dentro de la página, publicación continua, bloque de indexación y metadatos para buscadores. Se instala como cualquier módulo y se configura desde el panel de OJS.</p>
 		<div class="cta">
 			<a class="btn btn--primary" href="https://github.com/PaideiaPublishingServices/paideiaTheme/releases/latest">Descargar la última versión</a>
 			<a class="btn" href="https://github.com/PaideiaPublishingServices/paideiaTheme">Código en GitHub</a>
-			<a class="btn" href="#contacto">Soporte</a>
+			<a class="btn" href="#soporte">Plan de soporte</a>
 		</div>
 		<ul class="facts">
-			<li>OJS 3.4 y 3.5</li>
+			<li>OJS 3.4 · 3.5</li>
 			<li>Licencia GPL v3</li>
 			<li>Español, inglés, portugués e indonesio</li>
 			<li>Modo oscuro y móvil</li>
@@ -199,6 +98,7 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 					<li>En <strong>Ajustes → Sitio web → Apariencia → Tema</strong> elija <strong>Paideia</strong> y guarde.</li>
 				</ol>
 				<p style="margin-top:1rem;color:var(--muted);font-size:.92rem">Para instalar por consola: copie la carpeta en <code>plugins/themes/paideia</code> (el nombre debe ser <code>paideia</code>) y ejecute <code>php lib/pkp/tools/installPluginVersion.php plugins/themes/paideia/version.xml</code>.</p>
+				<p style="color:var(--muted);font-size:.92rem">Para actualizar, cargue el paquete nuevo de la misma forma: OJS lo reconoce como una versión más reciente y conserva la configuración.</p>
 			</div>
 			<figure class="shot"><img src="img/back-plugins.jpg" alt="Pestaña Módulos de los ajustes del sitio web de OJS" loading="lazy" width="2160" height="1350"><figcaption>Ajustes → Sitio web → Módulos.</figcaption></figure>
 		</div>
@@ -275,6 +175,7 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 	<div class="wrap">
 		<p class="eyebrow">Recorrido</p>
 		<h2>Cómo se ve</h2>
+		<p style="color:var(--muted);font-size:.92rem"></p>
 
 		<div class="row">
 			<div>
@@ -350,7 +251,7 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 		<p class="eyebrow">Preguntas frecuentes</p>
 		<h2>Antes de instalar</h2>
 		<div style="margin-top:1.5rem;max-width:52rem">
-			<details><summary>¿Es gratis?</summary><p>Sí. El tema es software libre (GPL v3). Lo único que pide la licencia es mantener visible el crédito «Tema desarrollado por Paideia Studio» en el pie de página. Si se oculta, el tema se desactiva en el navegador.</p></details>
+			<details><summary>¿Es gratis?</summary><p>Sí. El tema es software libre (GPL v3). Lo único que pide la licencia es mantener visible el crédito «Theme desarrollado por Paideia Studio» en el pie de página. Si se oculta, el tema se desactiva en el navegador. El plan anual de soporte es opcional.</p></details>
 			<details><summary>¿Funciona con mi versión de OJS?</summary><p>Con OJS 3.4 y 3.5. Requiere PHP 8.0 o superior (8.2 en OJS 3.5). No funciona con OJS 3.3.</p></details>
 			<details><summary>¿Pierdo algo de lo que ya configuré?</summary><p>No. El tema usa el pie de página, los menús, los bloques y los avisos que ya cargó en OJS. Si vuelve al tema Default, todo sigue en su lugar.</p></details>
 			<details><summary>¿Necesito una galerada HTML?</summary><p>No. Sin galerada HTML la página de artículo muestra el resumen, las referencias y el botón de PDF. Con galerada HTML, el texto completo se lee dentro de la página.</p></details>
@@ -361,16 +262,30 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 	</div>
 </section>
 
-<section id="contacto" class="contact">
-	<div class="wrap box">
-		<div>
-			<p class="eyebrow">Soporte</p>
-			<h2>¿Necesita ayuda con su revista?</h2>
-			<p class="lead" style="margin:0">Instalación, configuración, migración de contenidos, galeradas HTML y JATS, y actualizaciones gestionadas.</p>
+<section id="soporte" class="contact">
+	<div class="wrap">
+		<p class="eyebrow">Soporte</p>
+		<div class="plan">
+			<div>
+				<h2>Plan anual de soporte</h2>
+				<p class="lead" style="margin:0">El tema es gratuito. Si su revista necesita acompañamiento, el plan anual incluye:</p>
+				<ul>
+					<li>Acceso a las versiones actualizadas del plugin.</li>
+					<li>Soporte ante errores.</li>
+					<li>Asesoría de instalación y uso.</li>
+				</ul>
+			</div>
+			<div class="actions">
+				<a class="btn btn--primary" href="https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210" target="_blank" rel="noopener">Contratar el plan anual</a>
+				<p class="note">También se puede contratar desde las opciones del tema, en el panel de OJS.</p>
+			</div>
 		</div>
-		<div style="display:flex;flex-wrap:wrap;gap:.7rem">
-			<button class="btn btn--primary" type="button" id="mailBtn" data-u="contact" data-d="paideiastudio.net">Escribir a Paideia Studio</button>
-			<a class="btn" href="https://paideiastudio.net/">paideiastudio.net</a>
+		<div class="more">
+			<p style="margin:0">¿Otra consulta? Migraciones, galeradas HTML y JATS, hosting y actualizaciones gestionadas.</p>
+			<div style="display:flex;flex-wrap:wrap;gap:.7rem">
+				<button class="btn" type="button" id="mailBtn" data-u="contact" data-d="paideiastudio.net" data-s="Consulta sobre Paideia Theme para OJS">Escribir a Paideia Studio</button>
+				<a class="btn" href="https://paideiastudio.net/">paideiastudio.net</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -378,37 +293,12 @@ dialog.zoom img { max-width: 96vw; max-height: 94vh; border-radius: 10px; cursor
 
 <footer>
 	<div class="wrap">
-		<span>Paideia · Tema para OJS por <a href="https://paideiastudio.net/">Paideia Studio</a> · GPL v3</span>
+		<span>Paideia Theme · Tema para OJS por <a href="https://paideiastudio.net/">Paideia Studio</a> · GPL v3</span>
 		<span>Las capturas muestran una revista ficticia de demostración.</span>
 	</div>
 </footer>
 
 <dialog class="zoom" id="zoom"><img alt=""></dialog>
-
-<script>
-(function () {
-	var root = document.documentElement, btn = document.getElementById('themeBtn');
-	try { var saved = localStorage.getItem('pdt-docs-theme'); if (saved) { root.setAttribute('data-theme', saved); } } catch (e) {}
-	btn.addEventListener('click', function () {
-		var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-		var next = dark ? 'light' : 'dark';
-		root.setAttribute('data-theme', next);
-		try { localStorage.setItem('pdt-docs-theme', next); } catch (e) {}
-	});
-	// El correo se arma al hacer clic, para que no quede en el HTML.
-	var mail = document.getElementById('mailBtn');
-	mail.addEventListener('click', function () {
-		location.href = 'mailto:' + mail.dataset.u + '@' + mail.dataset.d + '?subject=' + encodeURIComponent('Consulta sobre el tema Paideia para OJS');
-	});
-	var zoom = document.getElementById('zoom'), zimg = zoom.querySelector('img');
-	document.querySelectorAll('.shot img').forEach(function (img) {
-		img.addEventListener('click', function () {
-			if (!zoom.showModal) { window.open(img.src); return; }
-			zimg.src = img.src; zimg.alt = img.alt; zoom.showModal();
-		});
-	});
-	zoom.addEventListener('click', function () { zoom.close(); });
-})();
-</script>
+<script src="assets/docs.js"></script>
 </body>
 </html>

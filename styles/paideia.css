@@ -1010,6 +1010,9 @@ body.pdt .pkp_brand_footer { float: none; width: auto; margin: 0; padding: 0; bo
 body.pdt .pkp_brand_footer > * { float: none; margin: 0; }
 body.pdt .pkp_brand_footer a { padding: 0; }
 body.pdt .pkp_brand_footer img { max-height: 30px; width: auto; opacity: .75; }
+body.pdt .pkp_brand_footer { gap: 1rem; }
+body.pdt .pkp_brand_footer a.pdt-repo { display: inline-flex; align-items: center; gap: .3em; font: 500 .7rem/1 var(--pdt-font-sans); color: var(--pdt-muted); text-decoration: none; opacity: .8; }
+body.pdt .pkp_brand_footer a.pdt-repo:hover { opacity: 1; text-decoration: underline; }
 html[data-pdt-dm][data-pdt-scheme="dark"] body.pdt .pkp_brand_footer img { filter: invert(1) hue-rotate(180deg); }
 /* Logos pensados para fondo claro: en modo oscuro van sobre una placa clara. */
 html[data-pdt-dm][data-pdt-scheme="dark"] body.pdt :is(.pkp_site_name .is_img img, .pdt-crossmark img) { background: #fff; padding: 4px 8px; border-radius: var(--pdt-radius-sm); }

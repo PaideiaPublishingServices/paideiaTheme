@@ -413,3 +413,15 @@ msgstr "Warna utama"
 
 msgid "plugins.themes.paideia.option.colour.description"
 msgstr "Dipakai untuk kepala halaman, tombol, tautan, dan tab."
+
+msgid "plugins.themes.paideia.option.support.label"
+msgstr "Dukungan tahunan Paideia Theme"
+
+msgid "plugins.themes.paideia.option.support.description"
+msgstr "Tema ini gratis. Paket dukungan tahunan mencakup akses ke versi plugin terbaru, bantuan untuk bug, serta konsultasi pemasangan dan penggunaan."
+
+msgid "plugins.themes.paideia.option.support.link"
+msgstr "Berlangganan paket dukungan tahunan"
+
+msgid "plugins.themes.paideia.option.support.docs"
+msgstr "Dokumentasi"

@@ -413,3 +413,15 @@ msgstr "Main colour"
 
 msgid "plugins.themes.paideia.option.colour.description"
 msgstr "Used for the header, buttons, links and tabs."
+
+msgid "plugins.themes.paideia.option.support.label"
+msgstr "Paideia Theme annual support"
+
+msgid "plugins.themes.paideia.option.support.description"
+msgstr "The theme is free. The annual support plan includes access to updated versions of the plugin, help with bugs and advice on installation and use."
+
+msgid "plugins.themes.paideia.option.support.link"
+msgstr "Get the annual support plan"
+
+msgid "plugins.themes.paideia.option.support.docs"
+msgstr "Documentation"

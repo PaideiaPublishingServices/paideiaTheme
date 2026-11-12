@@ -50,6 +50,10 @@ class PaideiaThemePlugin extends ThemePlugin
     /** Evita registrar el filtro de salida más de una vez por request. */
     protected bool $filterRegistered = false;
 
+    public const SUPPORT_URL = 'https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210';
+    public const DOCS_URL = 'https://paideiapublishingservices.github.io/paideiaTheme/';
+    public const REPO_URL = 'https://github.com/PaideiaPublishingServices/paideiaTheme';
+
     /**
      * @copydoc ThemePlugin::isActive()
      */
@@ -115,6 +119,18 @@ class PaideiaThemePlugin extends ThemePlugin
     }
 
     /**
+     * El aviso de soporte va antes que las opciones heredadas del Default.
+     */
+    public function getOptionsConfig()
+    {
+        $options = parent::getOptionsConfig();
+        if (isset($options['pdtSupport'])) {
+            $options = ['pdtSupport' => $options['pdtSupport']] + $options;
+        }
+        return $options;
+    }
+
+    /**
      * Opciones visibles en Ajustes → Sitio web → Apariencia → Tema.
      *
      * Cada opción toma de los archivos de idioma su etiqueta (.label), una
@@ -146,6 +162,21 @@ class PaideiaThemePlugin extends ThemePlugin
             fn ($v) => ['value' => $v, 'label' => (string) $t("{$key}.{$v}")],
             $values
         );
+
+        // Soporte: aviso informativo (FieldHTML no guarda valor), primero de
+        // la lista; ver getOptionsConfig().
+        $supportText = $t('support.description');
+        $supportLink = $t('support.link');
+        if ($supportText !== null && $supportLink !== null) {
+            $this->addOption('pdtSupport', 'FieldHTML', [
+                'label' => (string) $t('support.label'),
+                'description' => '<p>' . htmlspecialchars($supportText, ENT_QUOTES, 'UTF-8') . '</p><p>'
+                    . '<a href="' . htmlspecialchars(self::SUPPORT_URL, ENT_QUOTES, 'UTF-8') . '" target="_blank" rel="noopener">'
+                    . htmlspecialchars($supportLink, ENT_QUOTES, 'UTF-8') . '</a> · '
+                    . '<a href="' . htmlspecialchars(self::DOCS_URL, ENT_QUOTES, 'UTF-8') . '" target="_blank" rel="noopener">'
+                    . htmlspecialchars((string) $t('support.docs'), ENT_QUOTES, 'UTF-8') . '</a></p>',
+            ]);
+        }
 
         // Diseño
         $add('pdtFonts', 'FieldOptions', 'fonts', ['type' => 'radio', 'options' => $radio('fonts', ['serif', 'sans', 'system']), 'default' => 'serif']);
@@ -286,6 +317,7 @@ class PaideiaThemePlugin extends ThemePlugin
                 // Los bloques de la barra lateral van siempre al final de la página.
                 'pdtBlocks' => 'bottom',
                 'pdtTheme' => $this,
+                'pdtRepoUrl' => self::REPO_URL,
                 'pdtIndexes' => Indexes::active($this, $request->getBaseUrl()),
                 'pdtIndexingCustom' => $this->localizedOption('pdtIndexing'),
                 'pdtIndexingPosition' => $this->getOption('pdtIndexingPosition') === 'bottom' ? 'bottom' : 'top',

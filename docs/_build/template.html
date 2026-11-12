@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paideia Theme · {{title}}</title>
+<meta name="description" content="{{metaDescription}}">
+<meta property="og:title" content="Paideia Theme · {{title}}">
+<meta property="og:description" content="{{ogDescription}}">
+<meta property="og:image" content="{{root}}img/home.jpg">
+<link rel="canonical" href="{{url}}">
+{{alternates}}
+<link rel="stylesheet" href="{{root}}assets/docs.css">
+</head>
+<body>
+
+<header class="top">
+	<div class="wrap">
+		<a class="brand" href="./">
+			<svg viewBox="0 0 98 100" aria-hidden="true"><path fill="#7FBA34" d="M58.7 0.2 60.0 0.2 60.2 0.9 44.6 18.9 34.3 29.7 28.6 34.5 22.5 38.5 16.5 40.6 11.6 40.6 7.3 38.9 4.1 35.9 3.6 35.0 3.8 34.3 8.2 28.8 13.2 23.8 19.4 18.7 27.9 12.9 38.5 7.1 49.2 2.8 58.7 0.2ZM63.4 4.5 64.5 4.3 66.4 5.7 74.3 13.2 79.9 20.1 85.2 28.1 90.5 38.1 95.3 50.1 97.4 57.7 97.9 61.0 97.2 61.6 94.9 59.3 77.1 43.4 70.1 36.4 64.3 29.6 61.6 25.5 58.8 19.4 58.0 15.8 58.0 13.7 58.6 11.1 59.9 8.3 63.4 4.5ZM0.2 38.5 0.7 38.4 21.9 59.3 29.3 67.8 32.7 72.6 36.5 79.7 37.9 85.6 37.7 88.4 37.2 90.5 35.0 94.2 31.9 97.0 30.5 96.6 24.0 90.5 19.6 85.3 15.5 79.4 11.4 72.6 7.9 65.5 4.4 57.0 1.2 46.6 -0.1 39.2 0.2 38.5ZM80.5 59.3 84.2 59.2 87.0 59.9 89.8 61.4 92.8 64.3 92.9 65.7 88.5 71.2 83.5 76.2 79.2 79.9 69.5 86.6 58.2 92.9 46.6 97.5 38.3 99.7 36.9 99.9 36.4 99.3 52.4 80.9 62.4 70.3 68.1 65.5 74.7 61.3 80.5 59.3Z"/></svg>
+			<span>Paideia <small>Theme</small></span>
+		</a>
+		<nav aria-label="{{navLabel}}">
+			<a href="#incluye">{{navIncludes}}</a>
+			<a href="#instalacion">{{navInstall}}</a>
+			<a href="#configuracion">{{navConfig}}</a>
+			<a href="#recorrido">{{navTour}}</a>
+			<a href="#soporte">{{navSupport}}</a>
+		</nav>
+		<div class="lang" role="group" aria-label="{{langLabel}}">
+{{langnav}}
+		</div>
+		<button class="theme-btn" type="button" id="themeBtn" aria-label="{{themeToggle}}">
+			<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.4 2.26 5.4 5.4 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+		</button>
+	</div>
+</header>
+
+<main>
+<div class="hero">
+	<div class="wrap">
+		<p class="eyebrow">{{heroEyebrow}}</p>
+		<h1>{{heroTitle}}</h1>
+		<p class="lead">{{heroLead}}</p>
+		<div class="cta">
+			<a class="btn btn--primary" href="https://github.com/PaideiaPublishingServices/paideiaTheme/releases/latest">{{heroDownload}}</a>
+			<a class="btn" href="https://github.com/PaideiaPublishingServices/paideiaTheme">{{heroCode}}</a>
+			<a class="btn" href="#soporte">{{heroSupport}}</a>
+		</div>
+		<ul class="facts">
+			<li>OJS 3.4 · 3.5</li>
+			<li>{{factLicense}}</li>
+			<li>{{factLangs}}</li>
+			<li>{{factDark}}</li>
+		</ul>
+		<figure class="shot hero-shot">
+			<img src="{{root}}img/home.jpg" alt="{{altHome}}" width="2160" height="1350">
+			<figcaption>{{capHome}}</figcaption>
+		</figure>
+	</div>
+</div>
+
+<section id="incluye">
+	<div class="wrap">
+		<p class="eyebrow">{{navIncludes}}</p>
+		<h2>{{incTitle}}</h2>
+		<p class="lead">{{incLead}}</p>
+		<div class="grid grid-3" style="margin-top:2rem">
+			<div class="card"><h3>{{c1t}}</h3><p>{{c1}}</p></div>
+			<div class="card"><h3>{{c2t}}</h3><p>{{c2}}</p></div>
+			<div class="card"><h3>{{c3t}}</h3><p>{{c3}}</p></div>
+			<div class="card"><h3>{{c4t}}</h3><p>{{c4}}</p></div>
+			<div class="card"><h3>{{c5t}}</h3><p>{{c5}}</p></div>
+			<div class="card"><h3>SEO</h3><p>{{c6}}</p></div>
+			<div class="card"><h3>{{c7t}}</h3><p>{{c7}}</p></div>
+			<div class="card"><h3>{{c8t}}</h3><p>{{c8}}</p></div>
+			<div class="card"><h3>{{c9t}}</h3><p>{{c9}}</p></div>
+		</div>
+	</div>
+</section>
+
+<section id="instalacion">
+	<div class="wrap">
+		<p class="eyebrow">{{navInstall}}</p>
+		<h2>{{instTitle}}</h2>
+		<div class="row">
+			<div>
+				<ol class="steps">
+					<li>{{inst1}}</li>
+					<li>{{inst2}}</li>
+					<li>{{inst3}}</li>
+				</ol>
+				<p style="margin-top:1rem;color:var(--muted);font-size:.92rem">{{instCli}}</p>
+				<p style="color:var(--muted);font-size:.92rem">{{instUpdate}}</p>
+			</div>
+			<figure class="shot"><img src="{{root}}img/back-plugins.jpg" alt="{{altPlugins}}" loading="lazy" width="2160" height="1350"><figcaption>{{capPlugins}}</figcaption></figure>
+		</div>
+	</div>
+</section>
+
+<section id="configuracion">
+	<div class="wrap">
+		<p class="eyebrow">{{navConfig}}</p>
+		<h2>{{confTitle}}</h2>
+		<p class="lead">{{confLead}}</p>
+
+		<div class="row row--flip">
+			<div>
+				<h3>{{confDesignTitle}}</h3>
+				<ul class="clean">
+					<li>{{confDesign1}}</li>
+					<li>{{confDesign2}}</li>
+					<li>{{confDesign3}}</li>
+					<li>{{confDesign4}}</li>
+				</ul>
+			</div>
+			<figure class="shot"><img src="{{root}}img/back-home.jpg" alt="{{altBackHome}}" loading="lazy" width="2160" height="1350"><figcaption>{{capBackHome}}</figcaption></figure>
+		</div>
+
+		<div class="row">
+			<div>
+				<h3>{{confIdxTitle}}</h3>
+				<ul class="clean">
+					<li>{{confIdx1}}</li>
+					<li>{{confIdx2}}</li>
+					<li>{{confIdx3}}</li>
+				</ul>
+				<p style="color:var(--muted);font-size:.92rem">{{confIdxNote}}</p>
+			</div>
+			<figure class="shot"><img src="{{root}}img/back-indexing.jpg" alt="{{altBackIdx}}" loading="lazy" width="2160" height="1350"><figcaption>{{capBackIdx}}</figcaption></figure>
+		</div>
+
+		<div class="row row--flip">
+			<div>
+				<h3>{{confArtTitle}}</h3>
+				<ul class="clean">
+					<li>{{confArt1}}</li>
+					<li>{{confArt2}}</li>
+					<li>{{confArt3}}</li>
+				</ul>
+			</div>
+			<figure class="shot"><img src="{{root}}img/back-article.jpg" alt="{{altBackArt}}" loading="lazy" width="2160" height="1350"><figcaption>{{capBackArt}}</figcaption></figure>
+		</div>
+
+		<div class="table-wrap">
+			<table>
+				<thead><tr><th>{{thOption}}</th><th>{{thPurpose}}</th><th>{{thDefault}}</th></tr></thead>
+				<tbody>
+					<tr><td>{{o1}}</td><td>{{o1d}}</td><td>{{o1v}}</td></tr>
+					<tr><td>{{o2}}</td><td>{{o2d}}</td><td>{{o2v}}</td></tr>
+					<tr><td>{{o3}}</td><td>{{o3d}}</td><td>{{on}}</td></tr>
+					<tr><td>{{o4}}</td><td>{{o4d}}</td><td>{{o4v}}</td></tr>
+					<tr><td>{{o5}}</td><td>{{o5d}}</td><td>{{on}}</td></tr>
+					<tr><td>{{o6}}</td><td>{{o6d}}</td><td>{{off}}</td></tr>
+					<tr><td>{{o7}}</td><td>{{o7d}}</td><td>{{o7v}}</td></tr>
+					<tr><td>{{o8}}</td><td>{{o8d}}</td><td>{{on}}</td></tr>
+					<tr><td>{{o9}}</td><td>{{o9d}}</td><td>{{o9v}}</td></tr>
+					<tr><td>Crossmark</td><td>{{o10d}}</td><td>{{off}}</td></tr>
+					<tr><td>{{o11}}</td><td>{{o11d}}</td><td>{{o11v}}</td></tr>
+					<tr><td>{{o12}}</td><td>{{o12d}}</td><td>{{off}}</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+
+<section id="recorrido">
+	<div class="wrap">
+		<p class="eyebrow">{{navTour}}</p>
+		<h2>{{tourTitle}}</h2>
+		<p style="color:var(--muted);font-size:.92rem">{{tourNote}}</p>
+
+		<div class="row">
+			<div>
+				<h3>{{tourHomeTitle}}</h3>
+				<p>{{tourHome}}</p>
+				<figure class="shot" style="margin-top:1rem"><img src="{{root}}img/home-indexing.jpg" alt="{{altIdx}}" loading="lazy" width="1764" height="107"></figure>
+			</div>
+			<figure class="shot"><img src="{{root}}img/home-tabs.jpg" alt="{{altTabs}}" loading="lazy" width="1764" height="585"><figcaption>{{capTabs}}</figcaption></figure>
+		</div>
+
+		<div class="row row--flip">
+			<div>
+				<h3>{{c4t}}</h3>
+				<p>{{tourCont}}</p>
+			</div>
+			<figure class="shot"><img src="{{root}}img/home-continuous.jpg" alt="{{altCont}}" loading="lazy" width="1764" height="687"><figcaption>{{capCont}}</figcaption></figure>
+		</div>
+
+		<div class="row">
+			<div>
+				<h3>{{tourNewsTitle}}</h3>
+				<p>{{tourNews}}</p>
+			</div>
+			<figure class="shot"><img src="{{root}}img/home-news.jpg" alt="{{altNews}}" loading="lazy" width="1764" height="359"></figure>
+		</div>
+
+		<div style="margin-top:3.5rem">
+			<h3>{{c1t}}</h3>
+			<p style="max-width:46rem;color:var(--soft)">{{tourArt}}</p>
+			<figure class="shot" style="margin-top:1rem"><img src="{{root}}img/article.jpg" alt="{{altArt}}" loading="lazy" width="2160" height="1350"></figure>
+		</div>
+
+		<div class="grid grid-2" style="margin-top:1.5rem">
+			<figure class="shot"><img src="{{root}}img/article-figure.jpg" alt="{{altFig}}" loading="lazy" width="2160" height="1350"><figcaption>{{capFig}}</figcaption></figure>
+			<figure class="shot"><img src="{{root}}img/article-cite-tip.jpg" alt="{{altTip}}" loading="lazy" width="2160" height="1350"><figcaption>{{capTip}}</figcaption></figure>
+			<figure class="shot"><img src="{{root}}img/article-cite.jpg" alt="{{altCite}}" loading="lazy" width="2160" height="1350"><figcaption>{{capCite}}</figcaption></figure>
+			<figure class="shot"><img src="{{root}}img/article-dark.jpg" alt="{{altDark}}" loading="lazy" width="2160" height="1350"><figcaption>{{capDark}}</figcaption></figure>
+		</div>
+
+		<div class="grid grid-2" style="margin-top:3.5rem">
+			<figure class="shot"><img src="{{root}}img/issue.jpg" alt="{{altIssue}}" loading="lazy" width="2160" height="1350"><figcaption>{{capIssue}}</figcaption></figure>
+			<figure class="shot"><img src="{{root}}img/archive.jpg" alt="{{altArchive}}" loading="lazy" width="2160" height="1350"><figcaption>{{capArchive}}</figcaption></figure>
+			<figure class="shot"><img src="{{root}}img/about.jpg" alt="{{altAbout}}" loading="lazy" width="2160" height="1350"><figcaption>{{capAbout}}</figcaption></figure>
+			<figure class="shot"><img src="{{root}}img/nav.jpg" alt="{{altNav}}" loading="lazy" width="1200" height="495"><figcaption>{{capNav}}</figcaption></figure>
+		</div>
+
+		<div class="row" style="margin-top:3.5rem">
+			<div>
+				<h3>{{tourFootTitle}}</h3>
+				<p>{{tourFoot1}}</p>
+				<p>{{tourFoot2}}</p>
+			</div>
+			<div class="grid">
+				<figure class="shot"><img src="{{root}}img/footer.jpg" alt="{{altFooter}}" loading="lazy" width="2160" height="951"></figure>
+				<figure class="shot"><img src="{{root}}img/cookies.jpg" alt="{{altCookies}}" loading="lazy" width="2160" height="1350"></figure>
+			</div>
+		</div>
+
+		<div style="margin-top:3.5rem">
+			<h3>{{tourMobileTitle}}</h3>
+			<p style="color:var(--soft)">{{tourMobile}}</p>
+			<div class="phones" style="margin-top:1rem">
+				<figure class="shot shot--phone"><img src="{{root}}img/mobile-home.jpg" alt="{{altM1}}" loading="lazy" width="780" height="1688"></figure>
+				<figure class="shot shot--phone"><img src="{{root}}img/mobile-article.jpg" alt="{{altM2}}" loading="lazy" width="780" height="1688"></figure>
+				<figure class="shot shot--phone"><img src="{{root}}img/mobile-menu.jpg" alt="{{altM3}}" loading="lazy" width="780" height="1688"></figure>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="preguntas">
+	<div class="wrap">
+		<p class="eyebrow">{{faqEyebrow}}</p>
+		<h2>{{faqTitle}}</h2>
+		<div style="margin-top:1.5rem;max-width:52rem">
+			<details><summary>{{q1}}</summary><p>{{a1}}</p></details>
+			<details><summary>{{q2}}</summary><p>{{a2}}</p></details>
+			<details><summary>{{q3}}</summary><p>{{a3}}</p></details>
+			<details><summary>{{q4}}</summary><p>{{a4}}</p></details>
+			<details><summary>{{q5}}</summary><p>{{a5}}</p></details>
+			<details><summary>{{q6}}</summary><p>{{a6}}</p></details>
+			<details><summary>{{q7}}</summary><p>{{a7}}</p></details>
+		</div>
+	</div>
+</section>
+
+<section id="soporte" class="contact">
+	<div class="wrap">
+		<p class="eyebrow">{{navSupport}}</p>
+		<div class="plan">
+			<div>
+				<h2>{{planTitle}}</h2>
+				<p class="lead" style="margin:0">{{planLead}}</p>
+				<ul>
+					<li>{{plan1}}</li>
+					<li>{{plan2}}</li>
+					<li>{{plan3}}</li>
+				</ul>
+			</div>
+			<div class="actions">
+				<a class="btn btn--primary" href="https://shop.paideiahosting.net/shop/paideia-theme-annual-support-210" target="_blank" rel="noopener">{{planCta}}</a>
+				<p class="note">{{planNote}}</p>
+			</div>
+		</div>
+		<div class="more">
+			<p style="margin:0">{{contactLead}}</p>
+			<div style="display:flex;flex-wrap:wrap;gap:.7rem">
+				<button class="btn" type="button" id="mailBtn" data-u="contact" data-d="paideiastudio.net" data-s="{{mailSubject}}">{{contactBtn}}</button>
+				<a class="btn" href="https://paideiastudio.net/">paideiastudio.net</a>
+			</div>
+		</div>
+	</div>
+</section>
+</main>
+
+<footer>
+	<div class="wrap">
+		<span>Paideia Theme · {{footBy}} <a href="https://paideiastudio.net/">Paideia Studio</a> · GPL v3</span>
+		<span>{{footNote}}</span>
+	</div>
+</footer>
+
+<dialog class="zoom" id="zoom"><img alt=""></dialog>
+<script src="{{root}}assets/docs.js"></script>
+</body>
+</html>
