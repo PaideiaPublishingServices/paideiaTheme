@@ -349,7 +349,7 @@ msgid "plugins.themes.paideia.option.indexingPosition.label"
 msgstr "Indexação: posição"
 
 msgid "plugins.themes.paideia.option.indexingPosition.description"
-msgstr "Onde o bloco \"Indexada em\" é exibido. Recomenda-se cadastrar os índices aqui e não em um bloco personalizado da barra lateral: o tema cuida do design e os logos ficam alinhados."
+msgstr "Onde o bloco é exibido."
 
 msgid "plugins.themes.paideia.option.indexingPosition.top"
 msgstr "No topo da página inicial"
@@ -357,14 +357,10 @@ msgstr "No topo da página inicial"
 msgid "plugins.themes.paideia.option.indexingPosition.bottom"
 msgstr "No rodapé de todas as páginas (junto aos blocos)"
 
-msgid "plugins.themes.paideia.option.index.option"
-msgstr "Indexada (mostrar em \"Indexada em\")"
 
 msgid "plugins.themes.paideia.option.index.url"
-msgstr "Link para a revista em {$name}"
+msgstr "Link para a revista em {$name} (opcional)"
 
-msgid "plugins.themes.paideia.option.index.urlDescription"
-msgstr "Opcional. Abre em uma nova aba."
 
 msgid "plugins.themes.paideia.option.indexing.tooltip"
 msgstr "Use o botão de imagem para enviar o logo e o de link para adicionar o endereço. Logos horizontais com pelo menos 200 px de largura funcionam melhor."
@@ -425,3 +421,12 @@ msgstr "Contratar o plano anual de suporte"
 
 msgid "plugins.themes.paideia.option.support.docs"
 msgstr "Documentação"
+
+msgid "plugins.themes.paideia.option.indexingOn.label"
+msgstr "Indexada em"
+
+msgid "plugins.themes.paideia.option.indexingOn.description"
+msgstr "Mostra o bloco \"Indexada em\" com os indexadores marcados abaixo. Ao marcar um, aparece o campo para o link do registro da revista (opcional, abre em uma nova aba). Recomenda-se usar esta opção e não um bloco personalizado da barra lateral."
+
+msgid "plugins.themes.paideia.option.indexingOn.option"
+msgstr "Mostrar o bloco \"Indexada em\""

@@ -349,7 +349,7 @@ msgid "plugins.themes.paideia.option.indexingPosition.label"
 msgstr "Pengindeksan: posisi"
 
 msgid "plugins.themes.paideia.option.indexingPosition.description"
-msgstr "Tempat blok \"Terindeks di\" ditampilkan. Sebaiknya indeks diatur di sini, bukan di blok kustom bilah samping: tema mengatur desainnya dan logo tetap rapi."
+msgstr "Tempat blok ditampilkan."
 
 msgid "plugins.themes.paideia.option.indexingPosition.top"
 msgstr "Bagian atas beranda"
@@ -357,14 +357,10 @@ msgstr "Bagian atas beranda"
 msgid "plugins.themes.paideia.option.indexingPosition.bottom"
 msgstr "Bagian bawah semua halaman (di samping blok)"
 
-msgid "plugins.themes.paideia.option.index.option"
-msgstr "Terindeks (tampilkan di \"Terindeks di\")"
 
 msgid "plugins.themes.paideia.option.index.url"
-msgstr "Tautan ke jurnal di {$name}"
+msgstr "Tautan ke jurnal di {$name} (opsional)"
 
-msgid "plugins.themes.paideia.option.index.urlDescription"
-msgstr "Opsional. Dibuka di tab baru."
 
 msgid "plugins.themes.paideia.option.indexing.tooltip"
 msgstr "Gunakan tombol gambar untuk mengunggah logo dan tombol tautan untuk menambahkan alamat. Logo horizontal dengan lebar minimal 200 px paling sesuai."
@@ -425,3 +421,12 @@ msgstr "Berlangganan paket dukungan tahunan"
 
 msgid "plugins.themes.paideia.option.support.docs"
 msgstr "Dokumentasi"
+
+msgid "plugins.themes.paideia.option.indexingOn.label"
+msgstr "Terindeks di"
+
+msgid "plugins.themes.paideia.option.indexingOn.description"
+msgstr "Menampilkan blok \"Terindeks di\" dengan pengindeks yang dicentang di bawah. Setelah dicentang, muncul kolom untuk tautan ke profil jurnal (opsional, terbuka di tab baru). Sebaiknya gunakan opsi ini, bukan blok kustom di bilah samping."
+
+msgid "plugins.themes.paideia.option.indexingOn.option"
+msgstr "Tampilkan blok \"Terindeks di\""

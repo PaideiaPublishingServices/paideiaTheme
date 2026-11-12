@@ -131,6 +131,51 @@ class PaideiaThemePlugin extends ThemePlugin
     }
 
     /**
+     * Antes de 1.0.1 no existía el interruptor de indexación: si la revista
+     * ya tenía índices marcados o logos propios, arranca encendido.
+     */
+    protected function hasLegacyIndexing(): bool
+    {
+        try {
+            $context = Application::get()->getRequest()->getContext();
+            $contextId = $context ? (int) $context->getId() : 0;
+            foreach (array_keys(Indexes::CATALOG) as $key) {
+                if ($this->getSetting($contextId, Indexes::enabledOption($key))) {
+                    return true;
+                }
+            }
+            foreach ((array) $this->getSetting($contextId, 'pdtIndexing') as $html) {
+                if (trim(strip_tags((string) $html, '<img>')) !== '') {
+                    return true;
+                }
+            }
+        } catch (\Throwable $e) {
+        }
+        return false;
+    }
+
+    /**
+     * Estilos del formulario del tema en el panel: la lista de índices se
+     * muestra compacta (una casilla por línea) y los enlaces, sangrados
+     * debajo de su índice. Van dentro del aviso de soporte, que sólo se
+     * muestra con Paideia elegido, así que no afectan a otros formularios.
+     */
+    protected static function backendStyles(): string
+    {
+        $idx = '.pkpFormField:has(> .pkpFormField__control input[name^="pdtIdx_"])';
+        $url = '.pkpFormField:has(input[name^="pdtIdxUrl_"])';
+        return '<style>'
+            . "{$idx}{margin-top:0 !important;padding-top:.1rem !important;padding-bottom:.1rem !important;border:0 !important;box-shadow:none !important;background:none !important}"
+            . "{$idx} > legend{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}"
+            . "{$url}{margin:.1rem 0 .6rem 2.75rem !important;padding-top:0 !important}"
+            . "{$url} .pkpFormFieldLabel{font-weight:400;font-size:.875rem}"
+            // Con el interruptor general apagado, también se ocultan los
+            // enlaces de los índices que hubieran quedado marcados.
+            . '.pkpFormGroup__fields:has(input[name="pdtIndexingOn"]:not(:checked)) ' . $url . '{display:none !important}'
+            . '</style>';
+    }
+
+    /**
      * Opciones visibles en Ajustes → Sitio web → Apariencia → Tema.
      *
      * Cada opción toma de los archivos de idioma su etiqueta (.label), una
@@ -174,7 +219,8 @@ class PaideiaThemePlugin extends ThemePlugin
                     . '<a href="' . htmlspecialchars(self::SUPPORT_URL, ENT_QUOTES, 'UTF-8') . '" target="_blank" rel="noopener">'
                     . htmlspecialchars($supportLink, ENT_QUOTES, 'UTF-8') . '</a> · '
                     . '<a href="' . htmlspecialchars(self::DOCS_URL, ENT_QUOTES, 'UTF-8') . '" target="_blank" rel="noopener">'
-                    . htmlspecialchars((string) $t('support.docs'), ENT_QUOTES, 'UTF-8') . '</a></p>',
+                    . htmlspecialchars((string) $t('support.docs'), ENT_QUOTES, 'UTF-8') . '</a></p>'
+                    . self::backendStyles(),
             ]);
         }
 
@@ -187,24 +233,29 @@ class PaideiaThemePlugin extends ThemePlugin
         $add('pdtHomeTabs', 'FieldOptions', 'homeTabs', ['options' => $checkbox('homeTabs'), 'default' => true]);
         $add('pdtAnnouncementBar', 'FieldOptions', 'announcementBar', ['options' => $checkbox('announcementBar'), 'default' => false]);
 
-        // Indexación: posición, catálogo de índices y logos propios.
-        $add('pdtIndexingPosition', 'FieldOptions', 'indexingPosition', ['type' => 'radio', 'options' => $radio('indexingPosition', ['top', 'bottom']), 'default' => 'top']);
+        // Indexación: un interruptor general; con él apagado la sección
+        // ocupa una sola línea. Los índices van como lista compacta de
+        // casillas y el enlace de cada uno aparece sólo si está marcado
+        // (estilos en backendStyles()).
+        $add('pdtIndexingOn', 'FieldOptions', 'indexingOn', ['options' => $checkbox('indexingOn'), 'default' => $this->hasLegacyIndexing()]);
+        $add('pdtIndexingPosition', 'FieldOptions', 'indexingPosition', ['type' => 'radio', 'options' => $radio('indexingPosition', ['top', 'bottom']), 'default' => 'top', 'showWhen' => 'pdtIndexingOn']);
         foreach (Indexes::CATALOG as $key => [$name, $sub]) {
             $label = $sub ? "{$name} ({$sub})" : $name;
             $this->addOption(Indexes::enabledOption($key), 'FieldOptions', [
                 'label' => $label,
-                'options' => [['value' => true, 'label' => __('plugins.themes.paideia.option.index.option')]],
+                'options' => [['value' => true, 'label' => $label]],
                 'default' => false,
+                'showWhen' => 'pdtIndexingOn',
             ]);
             $this->addOption(Indexes::urlOption($key), 'FieldText', [
                 'label' => __('plugins.themes.paideia.option.index.url', ['name' => $label]),
-                'description' => htmlspecialchars(__('plugins.themes.paideia.option.index.urlDescription'), ENT_QUOTES, 'UTF-8'),
                 'showWhen' => Indexes::enabledOption($key),
                 'size' => 'large',
                 'default' => '',
             ]);
         }
         $add('pdtIndexing', 'FieldRichTextarea', 'indexing', [
+            'showWhen' => 'pdtIndexingOn',
             'isMultilingual' => true,
             'size' => 'large',
             'toolbar' => 'link image',
@@ -310,6 +361,7 @@ class PaideiaThemePlugin extends ThemePlugin
         }
 
         $request = Application::get()->getRequest();
+        $indexingOn = (bool) $this->getOption('pdtIndexingOn');
         try {
             $columns = (int) $this->getOption('pdtFooterColumns');
             $templateMgr->assign([
@@ -318,8 +370,8 @@ class PaideiaThemePlugin extends ThemePlugin
                 'pdtBlocks' => 'bottom',
                 'pdtTheme' => $this,
                 'pdtRepoUrl' => self::DOCS_URL,
-                'pdtIndexes' => Indexes::active($this, $request->getBaseUrl()),
-                'pdtIndexingCustom' => $this->localizedOption('pdtIndexing'),
+                'pdtIndexes' => $indexingOn ? Indexes::active($this, $request->getBaseUrl()) : [],
+                'pdtIndexingCustom' => $indexingOn ? $this->localizedOption('pdtIndexing') : '',
                 'pdtIndexingPosition' => $this->getOption('pdtIndexingPosition') === 'bottom' ? 'bottom' : 'top',
             ]);
             $this->prepareHeaderExtras($request);

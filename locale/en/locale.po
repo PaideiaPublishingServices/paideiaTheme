@@ -349,7 +349,7 @@ msgid "plugins.themes.paideia.option.indexingPosition.label"
 msgstr "Indexing: placement"
 
 msgid "plugins.themes.paideia.option.indexingPosition.description"
-msgstr "Where the \"Indexed in\" block is shown. We recommend adding indexes here rather than in a custom sidebar block: the theme handles the design and keeps logos aligned."
+msgstr "Where the block is shown."
 
 msgid "plugins.themes.paideia.option.indexingPosition.top"
 msgstr "Top of the home page"
@@ -357,14 +357,10 @@ msgstr "Top of the home page"
 msgid "plugins.themes.paideia.option.indexingPosition.bottom"
 msgstr "Bottom of every page (next to the blocks)"
 
-msgid "plugins.themes.paideia.option.index.option"
-msgstr "Indexed (show in \"Indexed in\")"
 
 msgid "plugins.themes.paideia.option.index.url"
-msgstr "Link to the journal in {$name}"
+msgstr "Link to the journal in {$name} (optional)"
 
-msgid "plugins.themes.paideia.option.index.urlDescription"
-msgstr "Optional. Opens in a new tab."
 
 msgid "plugins.themes.paideia.option.indexing.tooltip"
 msgstr "Use the image button to upload the logo and the link button to add the address. Horizontal logos at least 200 px wide work best."
@@ -425,3 +421,12 @@ msgstr "Get the annual support plan"
 
 msgid "plugins.themes.paideia.option.support.docs"
 msgstr "Documentation"
+
+msgid "plugins.themes.paideia.option.indexingOn.label"
+msgstr "Indexed in"
+
+msgid "plugins.themes.paideia.option.indexingOn.description"
+msgstr "Shows the \"Indexed in\" block with the indexes ticked below. Ticking an index shows a field for the link to the journal's record (optional, opens in a new tab). Use this option rather than a custom sidebar block."
+
+msgid "plugins.themes.paideia.option.indexingOn.option"
+msgstr "Show the \"Indexed in\" block"
