@@ -131,6 +131,104 @@ class PaideiaThemePlugin extends ThemePlugin
     }
 
     /**
+     * URLs para subir logos desde el formulario del tema: la API de archivos
+     * temporales de OJS y la carpeta pública de la revista. Null fuera de
+     * una revista (por ejemplo, en el tema del sitio).
+     */
+    protected function logoUploadConfig(): ?array
+    {
+        try {
+            $request = Application::get()->getRequest();
+            $context = $request->getContext();
+            if (!$context) {
+                return null;
+            }
+            return [
+                'url' => $request->getDispatcher()->url($request, Application::ROUTE_API, $context->getPath(), 'temporaryFiles'),
+                'baseUrl' => $request->getBaseUrl() . '/' . Indexes::publicPath((int) $context->getId()),
+            ];
+        } catch (\Throwable $e) {
+            return null;
+        }
+    }
+
+    /**
+     * Los logos de índices llegan como archivo temporal: se validan, se
+     * copian a la carpeta pública de la revista y se guarda su nombre (igual
+     * que el logo de la revista en OJS). El resto de las opciones sigue el
+     * camino normal.
+     */
+    public function saveOption($name, $value, $contextId = null)
+    {
+        if (!str_starts_with((string) $name, 'pdtIdxLogo_') || !isset($this->options[$name])) {
+            return parent::saveOption($name, $value, $contextId);
+        }
+        $request = Application::get()->getRequest();
+        $contextId ??= $request->getContext()?->getId();
+        $current = $this->getSetting($contextId, $name);
+        if (is_string($current)) {
+            $current = json_decode($current, true);
+        }
+        $publicFiles = new \APP\file\PublicFileManager();
+        $removeCurrent = function () use ($current, $publicFiles, $contextId) {
+            if (is_array($current) && !empty($current['uploadName'])) {
+                $publicFiles->removeContextFile($contextId, basename((string) $current['uploadName']));
+            }
+        };
+
+        // Quitar el logo.
+        if (empty($value) || !is_array($value)) {
+            $removeCurrent();
+            return parent::saveOption($name, '', $contextId);
+        }
+
+        // Sin archivo nuevo: sólo puede cambiar el texto alternativo.
+        if (empty($value['temporaryFileId'])) {
+            if (is_array($current)) {
+                $current['altText'] = trim(strip_tags((string) ($value['altText'] ?? '')));
+                $this->updateSetting($contextId, $name, $current, 'object');
+            }
+            return;
+        }
+
+        $user = $request->getUser();
+        $temporaryFiles = new \PKP\file\TemporaryFileManager();
+        $temporaryFile = $user ? $temporaryFiles->getFile((int) $value['temporaryFileId'], $user->getId()) : null;
+        if (!$temporaryFile) {
+            return;
+        }
+        $path = $temporaryFile->getFilePath();
+        $info = @getimagesize($path);
+        $mime = $info['mime'] ?? '';
+        if (!isset(Indexes::LOGO_TYPES[$mime]) || filesize($path) > Indexes::LOGO_MAX_MB * 1024 * 1024) {
+            $temporaryFiles->deleteById($temporaryFile->getId(), $user->getId());
+            error_log('[paideia theme] Logo de índice rechazado: formato o tamaño no válido.');
+            return;
+        }
+
+        // Nombre nuevo en cada carga para que el navegador no muestre el
+        // logo anterior desde la caché.
+        $key = substr($name, strlen('pdtIdxLogo_'));
+        $fileName = 'pdt-index-' . preg_replace('/[^a-zA-Z0-9]/', '', $key) . '-' . time() . Indexes::LOGO_TYPES[$mime];
+        if (!$publicFiles->copyContextFile($contextId, $path, $fileName)) {
+            return;
+        }
+        $temporaryFiles->deleteById($temporaryFile->getId(), $user->getId());
+        $removeCurrent();
+
+        // updateSetting y no parent::saveOption: este último codifica los
+        // arrays dos veces (convertToDb + updateSetting) y se leen como texto.
+        $this->updateSetting($contextId, $name, [
+            'name' => (string) $temporaryFile->getOriginalFileName(),
+            'uploadName' => $fileName,
+            'width' => (int) $info[0],
+            'height' => (int) $info[1],
+            'altText' => trim(strip_tags((string) ($value['altText'] ?? ''))),
+            'dateUploaded' => \PKP\core\Core::getCurrentDate(),
+        ], 'object');
+    }
+
+    /**
      * Antes de 1.0.1 no existía el interruptor de indexación: si la revista
      * ya tenía índices marcados o logos propios, arranca encendido.
      */
@@ -163,7 +261,7 @@ class PaideiaThemePlugin extends ThemePlugin
     protected static function backendStyles(): string
     {
         $idx = '.pkpFormField:has(> .pkpFormField__control input[name^="pdtIdx_"])';
-        $url = '.pkpFormField:has(input[name^="pdtIdxUrl_"])';
+        $url = ':is(.pkpFormField:has(input[name^="pdtIdxUrl_"]), .pkpFormField--uploadImage:has(input[name^="pdtIdxLogo_"]), .pkpFormField:has([id^="theme-pdtIdxLogo_"]))';
         return '<style>'
             . "{$idx}{margin-top:0 !important;padding-top:.1rem !important;padding-bottom:.1rem !important;border:0 !important;box-shadow:none !important;background:none !important}"
             . "{$idx} > legend{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}"
@@ -239,6 +337,7 @@ class PaideiaThemePlugin extends ThemePlugin
         // (estilos en backendStyles()).
         $add('pdtIndexingOn', 'FieldOptions', 'indexingOn', ['options' => $checkbox('indexingOn'), 'default' => $this->hasLegacyIndexing()]);
         $add('pdtIndexingPosition', 'FieldOptions', 'indexingPosition', ['type' => 'radio', 'options' => $radio('indexingPosition', ['top', 'bottom']), 'default' => 'top', 'showWhen' => 'pdtIndexingOn']);
+        $upload = $this->logoUploadConfig();
         foreach (Indexes::CATALOG as $key => [$name, $sub]) {
             $label = $sub ? "{$name} ({$sub})" : $name;
             $this->addOption(Indexes::enabledOption($key), 'FieldOptions', [
@@ -253,6 +352,20 @@ class PaideiaThemePlugin extends ThemePlugin
                 'size' => 'large',
                 'default' => '',
             ]);
+            if ($upload) {
+                $this->addOption(Indexes::logoOption($key), 'FieldUploadImage', [
+                    'label' => __('plugins.themes.paideia.option.index.logo', ['name' => $label]),
+                    'description' => htmlspecialchars(__('plugins.themes.paideia.option.index.logoDescription', ['size' => Indexes::LOGO_MAX_MB]), ENT_QUOTES, 'UTF-8'),
+                    'showWhen' => Indexes::enabledOption($key),
+                    'baseUrl' => $upload['baseUrl'],
+                    'options' => [
+                        'url' => $upload['url'],
+                        'acceptedFiles' => implode(',', array_keys(Indexes::LOGO_TYPES)),
+                        'maxFilesize' => Indexes::LOGO_MAX_MB,
+                    ],
+                    'default' => null,
+                ]);
+            }
         }
         $add('pdtIndexing', 'FieldRichTextarea', 'indexing', [
             'showWhen' => 'pdtIndexingOn',

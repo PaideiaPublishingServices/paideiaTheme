@@ -15,8 +15,8 @@
  *
  *  Los logotipos son marcas de sus dueños y no se distribuyen con el theme
  *  (no pueden licenciarse como GPL). Por defecto cada índice se muestra como
- *  una ficha tipográfica; si existe images/indexes/{clave}.svg (o .png) en el
- *  theme, se usa esa imagen.
+ *  una ficha tipográfica; si el editor sube el logo desde las opciones del
+ *  tema, se muestra el logo dentro de una ficha de tamaño fijo.
  */
 
 namespace APP\plugins\themes\paideia\classes;
@@ -54,6 +54,25 @@ class Indexes
         return 'pdtIdxUrl_' . $key;
     }
 
+    public static function logoOption(string $key): string
+    {
+        return 'pdtIdxLogo_' . $key;
+    }
+
+    /** Formatos aceptados para los logos (sin SVG: puede llevar scripts). */
+    public const LOGO_TYPES = ['image/png' => '.png', 'image/jpeg' => '.jpg', 'image/webp' => '.webp', 'image/gif' => '.gif'];
+
+    /** Tamaño máximo del logo, en MB. */
+    public const LOGO_MAX_MB = 1;
+
+    /**
+     * Carpeta pública de la revista, relativa a la raíz de OJS.
+     */
+    public static function publicPath(int $contextId): string
+    {
+        return (new \APP\file\PublicFileManager())->getContextFilesPath($contextId);
+    }
+
     /**
      * Índices activos, en el orden del catálogo.
      *
@@ -62,6 +81,8 @@ class Indexes
     public static function active($plugin, string $baseUrl): array
     {
         $items = [];
+        $context = \APP\core\Application::get()->getRequest()->getContext();
+        $contextId = $context ? (int) $context->getId() : 0;
         foreach (self::CATALOG as $key => [$name, $sub]) {
             if (!$plugin->getOption(self::enabledOption($key))) {
                 continue;
@@ -71,13 +92,13 @@ class Indexes
                 $url = 'https://' . ltrim($url, '/');
             }
             $img = '';
-            foreach (['svg', 'png', 'webp'] as $ext) {
-                if (is_file($plugin->getPluginPath() . "/images/indexes/{$key}.{$ext}")) {
-                    $img = $baseUrl . '/' . $plugin->getPluginPath() . "/images/indexes/{$key}.{$ext}";
-                    break;
-                }
+            $alt = '';
+            $logo = $plugin->getOption(self::logoOption($key));
+            if (is_array($logo) && !empty($logo['uploadName']) && $contextId) {
+                $img = $baseUrl . '/' . self::publicPath($contextId) . '/' . rawurlencode((string) $logo['uploadName']);
+                $alt = trim((string) ($logo['altText'] ?? ''));
             }
-            $items[] = ['key' => $key, 'name' => $name, 'sub' => $sub, 'url' => $url, 'img' => $img];
+            $items[] = ['key' => $key, 'name' => $name, 'sub' => $sub, 'url' => $url, 'img' => $img, 'alt' => $alt !== '' ? $alt : trim($name . ' ' . $sub)];
         }
         return $items;
     }

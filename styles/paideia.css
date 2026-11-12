@@ -527,7 +527,11 @@ body.pdt .pdt-index__in {
 body.pdt a.pdt-index__in:hover { border-color: var(--pdt-primary); color: var(--pdt-primary); box-shadow: var(--pdt-shadow); }
 body.pdt .pdt-index__name { font: 700 1rem/1.15 var(--pdt-font-sans); letter-spacing: -.01em; white-space: nowrap; }
 body.pdt .pdt-index__sub { margin-top: .15rem; font: 600 .66rem/1.2 var(--pdt-font-sans); text-transform: uppercase; letter-spacing: .07em; color: var(--pdt-muted); white-space: nowrap; }
-body.pdt .pdt-index__in img { max-height: 34px; max-width: 9rem; width: auto; }
+/* Logos: caja fija, el logo se ajusta adentro sin deformarse sea cual sea
+   su tamaño original. Fondo claro también en modo oscuro (los logos suelen
+   estar pensados para fondo blanco). */
+body.pdt .pdt-index--img .pdt-index__in { width: 9.5rem; height: 3.25rem; min-width: 0; padding: .4rem .75rem; background: #fff; }
+body.pdt .pdt-index__in img { display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
 body.pdt .pdt-indexing-wrap { grid-column: 1 / -1; width: 100%; margin: 2.5rem 0 0; padding-top: 2rem; border-top: 1px solid var(--pdt-border); }
 body.pdt .pdt-indexing--bottom { margin-bottom: 1rem; }
 

@@ -17,10 +17,10 @@
 		<h2 id="pdt-indexing-title-{$pdtIndexingPlace|escape}" class="pdt-eyebrow">{translate key="plugins.themes.paideia.indexedIn"}</h2>
 		<ul class="pdt-indexing__list">
 			{foreach from=$pdtIndexes item=idx}
-				<li class="pdt-index pdt-index--{$idx.key|escape}">
+				<li class="pdt-index pdt-index--{$idx.key|escape}{if $idx.img} pdt-index--img{/if}">
 					{if $idx.url}<a class="pdt-index__in" href="{$idx.url|escape}" target="_blank" rel="noopener">{else}<span class="pdt-index__in">{/if}
 						{if $idx.img}
-							<img src="{$idx.img|escape}" alt="{$idx.name|escape}{if $idx.sub} {$idx.sub|escape}{/if}" loading="lazy">
+							<img src="{$idx.img|escape}" alt="{$idx.alt|escape}" loading="lazy">
 						{else}
 							<span class="pdt-index__name">{$idx.name|escape}</span>
 							{if $idx.sub}<span class="pdt-index__sub">{$idx.sub|escape}</span>{/if}

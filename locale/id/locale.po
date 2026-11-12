@@ -430,3 +430,9 @@ msgstr "Menampilkan blok \"Terindeks di\" dengan pengindeks yang dicentang di ba
 
 msgid "plugins.themes.paideia.option.indexingOn.option"
 msgstr "Tampilkan blok \"Terindeks di\""
+
+msgid "plugins.themes.paideia.option.index.logo"
+msgstr "Logo {$name} (opsional)"
+
+msgid "plugins.themes.paideia.option.index.logoDescription"
+msgstr "PNG, JPG, WebP, atau GIF hingga {$size} MB. Logo otomatis disesuaikan dengan ubin tanpa terdistorsi; tanpa logo, nama yang ditampilkan."

@@ -430,3 +430,9 @@ msgstr "Mostra o bloco \"Indexada em\" com os indexadores marcados abaixo. Ao ma
 
 msgid "plugins.themes.paideia.option.indexingOn.option"
 msgstr "Mostrar o bloco \"Indexada em\""
+
+msgid "plugins.themes.paideia.option.index.logo"
+msgstr "Logo de {$name} (opcional)"
+
+msgid "plugins.themes.paideia.option.index.logoDescription"
+msgstr "PNG, JPG, WebP ou GIF de até {$size} MB. Ajusta-se sozinho à ficha, sem deformar; sem logo, aparece o nome."

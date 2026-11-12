@@ -430,3 +430,9 @@ msgstr "Shows the \"Indexed in\" block with the indexes ticked below. Ticking an
 
 msgid "plugins.themes.paideia.option.indexingOn.option"
 msgstr "Show the \"Indexed in\" block"
+
+msgid "plugins.themes.paideia.option.index.logo"
+msgstr "{$name} logo (optional)"
+
+msgid "plugins.themes.paideia.option.index.logoDescription"
+msgstr "PNG, JPG, WebP or GIF up to {$size} MB. It is fitted to the tile automatically without distortion; without a logo, the name is shown."
